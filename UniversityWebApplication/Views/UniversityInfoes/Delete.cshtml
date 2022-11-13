@@ -1,0 +1,937 @@
+﻿@model UniversityWebApplication.Models.UniversityInfo
+
+@{
+    Layout = null;
+}
+
+<h1>University Entry Details</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <div>
+            <b>ID: </b> @Html.DisplayFor(model => model.ID)
+        </div>
+        <div>
+            <b>Name: </b> @Html.DisplayFor(model => model.Name)
+        </div>
+        <div>
+            <b>Address: </b> @Html.DisplayFor(model => model.Address)
+        </div>
+        <div>
+            <b>Average Domestic Undergraduate Cost of Tuition per semester: $</b> @Html.DisplayFor(model => model.Average_Domestic_Undergraduate_Cost_of_Tuition_per_semester)
+        </div>
+        <div>
+            <b>Average International Undergraduate Cost of Tuition per semester: $</b> @Html.DisplayFor(model => model.Average_International_Undergraduate_Cost_of_Tuition_per_semester)
+        </div>
+        <div>
+            <b>Average Domestic Postgraduate(Master)Cost of Tuition per semester: $</b> @Html.DisplayFor(model => model.Average_Domestic_Postgraduate_Master_Cost_of_Tuition_per_semester)
+        </div>
+        <div>
+            <b>Average International Postgraduate(Master)Cost of Tuition per semester: $</b> @Html.DisplayFor(model => model.Average_International_Postgraduate_Master_Cost_of_Tuition_per_semester)
+        </div>
+        <div>
+            <b>Average Cost of Living: $</b> @Html.DisplayFor(model => model.Average_Cost_of_Living)
+        </div>
+        <div>
+            <b>Type: </b> @Html.DisplayFor(model => model.Type)
+        </div>
+        <div>
+            <b>Campus Setting: </b> @Html.DisplayFor(model => model.Campus_Setting)
+        </div>
+        <div>
+            <b>QS General Ranking: </b> @Html.DisplayFor(model => model.QS_General_Ranking)
+        </div>
+        <div>
+            <b>Qualification Requirements: </b> @Html.DisplayFor(model => model.Qualification_Requirements)
+        </div>
+        <div>
+            <b>Accounting: </b> @Html.DisplayFor(model => model.Accounting)
+        </div>
+        <div>
+            <b>Accounting Technician: </b> @Html.DisplayFor(model => model.Accounting_Technician)
+        </div>
+        <div>
+            <b>Actuarial Science: </b> @Html.DisplayFor(model => model.Actuarial_Science)
+        </div>
+        <div>
+            <b>Adult Development&Aging/Gerontology: </b> @Html.DisplayFor(model => model.Adult_Development_Aging_Gerontology)
+        </div>
+        <div>
+            <b>Advertising: </b> @Html.DisplayFor(model => model.Advertising)
+        </div>
+        <div>
+            <b>Aeronautical&Astronautical Engineering Technologies: </b> @Html.DisplayFor(model => model.Aeronautical_Astronautical_Engineering_Technologies)
+        </div>
+        <div>
+            <b>Aeronautical&Astronautical Engineering: </b> @Html.DisplayFor(model => model.Aeronautical_Astronautical_Engineering)
+        </div>
+        <div>
+            <b>African American Studies: </b> @Html.DisplayFor(model => model.African_American_Studies)
+        </div>
+        <div>
+            <b>Agribusiness Operations: </b> @Html.DisplayFor(model => model.Agribusiness_Operations)
+        </div>
+        <div>
+            <b>Agricultural Business Management: </b> @Html.DisplayFor(model => model.Agricultural_Business_Management)
+        </div>
+        <div>
+            <b>Agricultural Economics: </b> @Html.DisplayFor(model => model.Agricultural_Economics)
+        </div>
+        <div>
+            <b>Agricultural Education: </b> @Html.DisplayFor(model => model.Agricultural_Education)
+        </div>
+        <div>
+            <b>Agricultural Mechanization: </b> @Html.DisplayFor(model => model.Agricultural_Mechanization)
+        </div>
+        <div>
+            <b>Agricultural Production: </b> @Html.DisplayFor(model => model.Agricultural_Production)
+        </div>
+        <div>
+            <b>Agricultural/Bioengineering: </b> @Html.DisplayFor(model => model.Agricultural_Bioengineering)
+        </div>
+        <div>
+            <b>Agriculture,General: </b> @Html.DisplayFor(model => model.Agriculture_General)
+        </div>
+        <div>
+            <b>Agronomy&Crop Science: </b> @Html.DisplayFor(model => model.Agronomy_Crop_Science)
+        </div>
+        <div>
+            <b>Aircraft Mechanics/Technology: </b> @Html.DisplayFor(model => model.Aircraft_Mechanics_Technology)
+        </div>
+        <div>
+            <b>Aircraft Piloting&Navigation: </b> @Html.DisplayFor(model => model.Aircraft_Piloting_Navigation)
+        </div>
+        <div>
+            <b>Alcohol/Drug Abuse Counseling: </b> @Html.DisplayFor(model => model.Alcohol_Drug_Abuse_Counseling)
+        </div>
+        <div>
+            <b>American Indian Native American Studies: </b> @Html.DisplayFor(model => model.American_Indian_Native_American_Studies)
+        </div>
+        <div>
+            <b>American/English Literature: </b> @Html.DisplayFor(model => model.American_English_Literature)
+        </div>
+        <div>
+            <b>Animal Sciences: </b> @Html.DisplayFor(model => model.Animal_Sciences)
+        </div>
+        <div>
+            <b>Anthropology: </b> @Html.DisplayFor(model => model.Anthropology)
+        </div>
+        <div>
+            <b>Applied Mathematics: </b> @Html.DisplayFor(model => model.Applied_Mathematics)
+        </div>
+        <div>
+            <b>Architectural Drafting/CAD Technology: </b> @Html.DisplayFor(model => model.Architectural_Drafting_CAD_Technology)
+        </div>
+        <div>
+            <b>Architectural Engineering: </b> @Html.DisplayFor(model => model.Architectural_Engineering)
+        </div>
+        <div>
+            <b>Architectural Engineering Technology: </b> @Html.DisplayFor(model => model.Architectural_Engineering_Technology)
+        </div>
+        <div>
+            <b>Architectural Environmental Design: </b> @Html.DisplayFor(model => model.Architectural_Environmental_Design)
+        </div>
+        <div>
+            <b>Architecture,General: </b> @Html.DisplayFor(model => model.Architecture_General)
+        </div>
+        <div>
+            <b>Area Studies,General(e.g.African,Middle Eastern): </b> @Html.DisplayFor(model => model.Area_Studies_General_e_g_African_Middle_Eastern)
+        </div>
+        <div>
+            <b>Art Education: </b> @Html.DisplayFor(model => model.Art_Education)
+        </div>
+        <div>
+            <b>Art History,Criticism&Conservation: </b> @Html.DisplayFor(model => model.Art_History_Criticism_Conservation)
+        </div>
+        <div>
+            <b>Art,General: </b> @Html.DisplayFor(model => model.Art_General)
+        </div>
+        <div>
+            <b>Asian Area Studies: </b> @Html.DisplayFor(model => model.Asian_Area_Studies)
+        </div>
+        <div>
+            <b>Asian Languages&Literatures: </b> @Html.DisplayFor(model => model.Asian_Languages_Literatures)
+        </div>
+        <div>
+            <b>Astronomy: </b> @Html.DisplayFor(model => model.Astronomy)
+        </div>
+        <div>
+            <b>Athletic Training: </b> @Html.DisplayFor(model => model.Athletic_Training)
+        </div>
+        <div>
+            <b>Atmospheric Sciences/Meteorology: </b> @Html.DisplayFor(model => model.Atmospheric_Sciences_Meteorology)
+        </div>
+        <div>
+            <b>Autobody Repair/Technology: </b> @Html.DisplayFor(model => model.Autobody_Repair_Technology)
+        </div>
+        <div>
+            <b>Automotive Engineering Technology: </b> @Html.DisplayFor(model => model.Automotive_Engineering_Technology)
+        </div>
+        <div>
+            <b>Automotive Mechanics/Technology: </b> @Html.DisplayFor(model => model.Automotive_Mechanics_Technology)
+        </div>
+        <div>
+            <b>Aviation&Airway Science,General: </b> @Html.DisplayFor(model => model.Aviation_Airway_Science_General)
+        </div>
+        <div>
+            <b>Aviation Management&Operations: </b> @Html.DisplayFor(model => model.Aviation_Management_Operations)
+        </div>
+        <div>
+            <b>Avionics Technology: </b> @Html.DisplayFor(model => model.Avionics_Technology)
+        </div>
+        <div>
+            <b>Banking&Financial Support Services: </b> @Html.DisplayFor(model => model.Banking_Financial_Support_Services)
+        </div>
+        <div>
+            <b>Bible/Biblical Studies: </b> @Html.DisplayFor(model => model.Bible_Biblical_Studies)
+        </div>
+        <div>
+            <b>Biochemistry/Biophysics: </b> @Html.DisplayFor(model => model.Biochemistry_Biophysics)
+        </div>
+        <div>
+            <b>Biology,General: </b> @Html.DisplayFor(model => model.Biology_General)
+        </div>
+        <div>
+            <b>Biomedical Engineering: </b> @Html.DisplayFor(model => model.Biomedical_Engineering)
+        </div>
+        <div>
+            <b>Business Administration&Management,General: </b> @Html.DisplayFor(model => model.Business_Administration_Management_General)
+        </div>
+        <div>
+            <b>Business Education: </b> @Html.DisplayFor(model => model.Business_Education)
+        </div>
+        <div>
+            <b>Business/Management Quantitative Methods,General: </b> @Html.DisplayFor(model => model.Business_Management_Quantitative_Methods_General)
+        </div>
+        <div>
+            <b>Business/Managerial Economics: </b> @Html.DisplayFor(model => model.Business_Managerial_Economics)
+        </div>
+        <div>
+            <b>Career&Technical Education: </b> @Html.DisplayFor(model => model.Career_Technical_Education)
+        </div>
+        <div>
+            <b>Cell/Cellular Biology: </b> @Html.DisplayFor(model => model.Cell_Cellular_Biology)
+        </div>
+        <div>
+            <b>Chemical Engineering: </b> @Html.DisplayFor(model => model.Chemical_Engineering)
+        </div>
+        <div>
+            <b>Chemistry: </b> @Html.DisplayFor(model => model.Chemistry)
+        </div>
+        <div>
+            <b>Child Care Services Management: </b> @Html.DisplayFor(model => model.Child_Care_Services_Management)
+        </div>
+        <div>
+            <b>Child Development: </b> @Html.DisplayFor(model => model.Child_Development)
+        </div>
+        <div>
+            <b>Chiropractic(Pre-Chiropractic): </b> @Html.DisplayFor(model => model.Chiropractic_Pre_Chiropractic)
+        </div>
+        <div>
+            <b>Cinema/Film: </b> @Html.DisplayFor(model => model.Cinema_Film)
+        </div>
+        <div>
+            <b>Cinematography/Film/Video Production: </b> @Html.DisplayFor(model => model.Cinematography_Film_Video_Production)
+        </div>
+        <div>
+            <b>City/Urban/Regional Planning: </b> @Html.DisplayFor(model => model.City_Urban_Regional_Planning)
+        </div>
+        <div>
+            <b>Civil Engineering: </b> @Html.DisplayFor(model => model.Civil_Engineering)
+        </div>
+        <div>
+            <b>Civil Engineering Technology: </b> @Html.DisplayFor(model => model.Civil_Engineering_Technology)
+        </div>
+        <div>
+            <b>Classical/Ancient Languages&Literatures: </b> @Html.DisplayFor(model => model.Classical_Ancient_Languages_Literatures)
+        </div>
+        <div>
+            <b>Communication Disorder Services(e.g.Speech Pathology): </b> @Html.DisplayFor(model => model.Communication_Disorder_Services_e_g_Speech_Pathology)
+        </div>
+        <div>
+            <b>Communications Technology,General: </b> @Html.DisplayFor(model => model.Communications_Technology_General)
+        </div>
+        <div>
+            <b>Communications,General: </b> @Html.DisplayFor(model => model.Communications_General)
+        </div>
+        <div>
+            <b>Community Organization&Advocacy: </b> @Html.DisplayFor(model => model.Community_Organization_Advocacy)
+        </div>
+        <div>
+            <b>Comparative Literature: </b> @Html.DisplayFor(model => model.Comparative_Literature)
+        </div>
+        <div>
+            <b>Computer&Information Sciences,General: </b> @Html.DisplayFor(model => model.Computer_Information_Sciences_General)
+        </div>
+        <div>
+            <b>Computer Engineering: </b> @Html.DisplayFor(model => model.Computer_Engineering)
+        </div>
+        <div>
+            <b>Computer Engineering Technology: </b> @Html.DisplayFor(model => model.Computer_Engineering_Technology)
+        </div>
+        <div>
+            <b>Computer Networking/Telecommunications: </b> @Html.DisplayFor(model => model.Computer_Networking_Telecommunications)
+        </div>
+        <div>
+            <b>Computer Science&Programming: </b> @Html.DisplayFor(model => model.Computer_Science_Programming)
+        </div>
+        <div>
+            <b>Computer Software&Media Applications: </b> @Html.DisplayFor(model => model.Computer_Software_Media_Applications)
+        </div>
+        <div>
+            <b>Computer System Administration: </b> @Html.DisplayFor(model => model.Computer_System_Administration)
+        </div>
+        <div>
+            <b>Construction Engineering/Management: </b> @Html.DisplayFor(model => model.Construction_Engineering_Management)
+        </div>
+        <div>
+            <b>Construction Trades(e.g.carpentry,plumbing,electrical): </b> @Html.DisplayFor(model => model.Construction_Trades_e_g_carpentry_plumbing_electrical)
+        </div>
+        <div>
+            <b>Construction/Building Technology: </b> @Html.DisplayFor(model => model.Construction_Building_Technology)
+        </div>
+        <div>
+            <b>Consumer&Family Economics: </b> @Html.DisplayFor(model => model.Consumer_Family_Economics)
+        </div>
+        <div>
+            <b>Corrections: </b> @Html.DisplayFor(model => model.Corrections)
+        </div>
+        <div>
+            <b>Cosmetology/Hairstyling: </b> @Html.DisplayFor(model => model.Cosmetology_Hairstyling)
+        </div>
+        <div>
+            <b>Counseling&Student Services: </b> @Html.DisplayFor(model => model.Counseling_Student_Services)
+        </div>
+        <div>
+            <b>Court Reporting: </b> @Html.DisplayFor(model => model.Court_Reporting)
+        </div>
+        <div>
+            <b>Creative Writing: </b> @Html.DisplayFor(model => model.Creative_Writing)
+        </div>
+        <div>
+            <b>Criminal Justice: </b> @Html.DisplayFor(model => model.Criminal_Justice)
+        </div>
+        <div>
+            <b>Criminology: </b> @Html.DisplayFor(model => model.Criminology)
+        </div>
+        <div>
+            <b>Culinary Arts/Chef Training: </b> @Html.DisplayFor(model => model.Culinary_Arts_Chef_Training)
+        </div>
+        <div>
+            <b>Curriculum&Instruction: </b> @Html.DisplayFor(model => model.Curriculum_Instruction)
+        </div>
+        <div>
+            <b>Dance: </b> @Html.DisplayFor(model => model.Dance)
+        </div>
+        <div>
+            <b>Data Management Technology: </b> @Html.DisplayFor(model => model.Data_Management_Technology)
+        </div>
+        <div>
+            <b>Dental Assisting: </b> @Html.DisplayFor(model => model.Dental_Assisting)
+        </div>
+        <div>
+            <b>Dental Hygiene: </b> @Html.DisplayFor(model => model.Dental_Hygiene)
+        </div>
+        <div>
+            <b>Dentistry(Pre-Dentistry): </b> @Html.DisplayFor(model => model.Dentistry_Pre_Dentistry)
+        </div>
+        <div>
+            <b>Design&Visual Communications,General: </b> @Html.DisplayFor(model => model.Design_Visual_Communications_General)
+        </div>
+        <div>
+            <b>Diesel Mechanics/Technology: </b> @Html.DisplayFor(model => model.Diesel_Mechanics_Technology)
+        </div>
+        <div>
+            <b>Digital Communications/Media: </b> @Html.DisplayFor(model => model.Digital_Communications_Media)
+        </div>
+        <div>
+            <b>Divinity/Ministry: </b> @Html.DisplayFor(model => model.Divinity_Ministry)
+        </div>
+        <div>
+            <b>Drafting/CAD Technology,General: </b> @Html.DisplayFor(model => model.Drafting_CAD_Technology_General)
+        </div>
+        <div>
+            <b>Early Childhood Education: </b> @Html.DisplayFor(model => model.Early_Childhood_Education)
+        </div>
+        <div>
+            <b>Ecology: </b> @Html.DisplayFor(model => model.Ecology)
+        </div>
+        <div>
+            <b>Economics: </b> @Html.DisplayFor(model => model.Economics)
+        </div>
+        <div>
+            <b>Educational Administration: </b> @Html.DisplayFor(model => model.Educational_Administration)
+        </div>
+        <div>
+            <b>Electrical,Electronics&Communications Engineering: </b> @Html.DisplayFor(model => model.Electrical_Electronics_Communications_Engineering)
+        </div>
+        <div>
+            <b>Electrical,Electronics Engineering Technologies: </b> @Html.DisplayFor(model => model.Electrical_Electronics_Engineering_Technologies)
+        </div>
+        <div>
+            <b>Electrical&Electronics Equip Installation&Repair: </b> @Html.DisplayFor(model => model.Electrical_Electronics_Equip_Installation_Repair)
+        </div>
+        <div>
+            <b>Electromechanical&Biomedical Engineering Technologies: </b> @Html.DisplayFor(model => model.Electromechanical_Biomedical_Engineering_Technologies)
+        </div>
+        <div>
+            <b>Elementary Education: </b> @Html.DisplayFor(model => model.Elementary_Education)
+        </div>
+        <div>
+            <b>Emergency Medical Technology: </b> @Html.DisplayFor(model => model.Emergency_Medical_Technology)
+        </div>
+        <div>
+            <b>Engineering(Pre-Engineering,General): </b> @Html.DisplayFor(model => model.Engineering_Pre_Engineering_General)
+        </div>
+        <div>
+            <b>Engineering Technology,General: </b> @Html.DisplayFor(model => model.Engineering_Technology_General)
+        </div>
+        <div>
+            <b>English Language&Literature,General: </b> @Html.DisplayFor(model => model.English_Language_Literature_General)
+        </div>
+        <div>
+            <b>English/Language Arts Education: </b> @Html.DisplayFor(model => model.English_Language_Arts_Education)
+        </div>
+        <div>
+            <b>English-as-a-Second-Language Education: </b> @Html.DisplayFor(model => model.English_as_a_Second_Language_Education)
+        </div>
+        <div>
+            <b>Environmental Control Technologies: </b> @Html.DisplayFor(model => model.Environmental_Control_Technologies)
+        </div>
+        <div>
+            <b>Environmental Health Engineering: </b> @Html.DisplayFor(model => model.Environmental_Health_Engineering)
+        </div>
+        <div>
+            <b>Environmental Science: </b> @Html.DisplayFor(model => model.Environmental_Science)
+        </div>
+        <div>
+            <b>Ethnic&Minority Studies,General: </b> @Html.DisplayFor(model => model.Ethnic_Minority_Studies_General)
+        </div>
+        <div>
+            <b>European Area Studies: </b> @Html.DisplayFor(model => model.European_Area_Studies)
+        </div>
+        <div>
+            <b>Exercise Science/Physiology/Kinesiology: </b> @Html.DisplayFor(model => model.Exercise_Science_Physiology_Kinesiology)
+        </div>
+        <div>
+            <b>Family&Consumer Sciences,General: </b> @Html.DisplayFor(model => model.Family_Consumer_Sciences_General)
+        </div>
+        <div>
+            <b>Fashion Merchandising: </b> @Html.DisplayFor(model => model.Fashion_Merchandising)
+        </div>
+        <div>
+            <b>Fashion/Apparel Design: </b> @Html.DisplayFor(model => model.Fashion_Apparel_Design)
+        </div>
+        <div>
+            <b>Finance,General: </b> @Html.DisplayFor(model => model.Finance_General)
+        </div>
+        <div>
+            <b>Financial Planning&Services: </b> @Html.DisplayFor(model => model.Financial_Planning_Services)
+        </div>
+        <div>
+            <b>Fine/Studio Arts: </b> @Html.DisplayFor(model => model.Fine_Studio_Arts)
+        </div>
+        <div>
+            <b>Fire Protection&Safety Technology: </b> @Html.DisplayFor(model => model.Fire_Protection_Safety_Technology)
+        </div>
+        <div>
+            <b>Food&Nutrition: </b> @Html.DisplayFor(model => model.Food_Nutrition)
+        </div>
+        <div>
+            <b>Food Sciences&Technology: </b> @Html.DisplayFor(model => model.Food_Sciences_Technology)
+        </div>
+        <div>
+            <b>Foreign Languages/Education: </b> @Html.DisplayFor(model => model.Foreign_Languages_Education)
+        </div>
+        <div>
+            <b>Foreign Languages/Literatures,General: </b> @Html.DisplayFor(model => model.Foreign_Languages_Literatures_General)
+        </div>
+        <div>
+            <b>Forestry: </b> @Html.DisplayFor(model => model.Forestry)
+        </div>
+        <div>
+            <b>French Language&Literature: </b> @Html.DisplayFor(model => model.French_Language_Literature)
+        </div>
+        <div>
+            <b>Funeral Services&Mortuary Science: </b> @Html.DisplayFor(model => model.Funeral_Services_Mortuary_Science)
+        </div>
+        <div>
+            <b>Genetics: </b> @Html.DisplayFor(model => model.Genetics)
+        </div>
+        <div>
+            <b>Geography: </b> @Html.DisplayFor(model => model.Geography)
+        </div>
+        <div>
+            <b>Geological&Earth Sciences: </b> @Html.DisplayFor(model => model.Geological_Earth_Sciences)
+        </div>
+        <div>
+            <b>German Language&Literature: </b> @Html.DisplayFor(model => model.German_Language_Literature)
+        </div>
+        <div>
+            <b>Graphic&Printing Equipment Operation: </b> @Html.DisplayFor(model => model.Graphic_Printing_Equipment_Operation)
+        </div>
+        <div>
+            <b>Graphic Design: </b> @Html.DisplayFor(model => model.Graphic_Design)
+        </div>
+        <div>
+            <b>Health&Physical Education/Fitness: </b> @Html.DisplayFor(model => model.Health_Physical_Education_Fitness)
+        </div>
+        <div>
+            <b>Health Education: </b> @Html.DisplayFor(model => model.Health_Education)
+        </div>
+        <div>
+            <b>Health Services Administration,General: </b> @Html.DisplayFor(model => model.Health_Services_Administration_General)
+        </div>
+        <div>
+            <b>Health/Medical Technology,General: </b> @Html.DisplayFor(model => model.Health_Medical_Technology_General)
+        </div>
+        <div>
+            <b>Health-Related Professions&Services,General: </b> @Html.DisplayFor(model => model.Health_Related_Professions_Services_General)
+        </div>
+        <div>
+            <b>Heating/Air-Cond/Refrig Install/Repair: </b> @Html.DisplayFor(model => model.Heating_Air_Cond_Refrig_Install_Repair)
+        </div>
+        <div>
+            <b>History: </b> @Html.DisplayFor(model => model.History)
+        </div>
+        <div>
+            <b>Horticulture Operations&Management: </b> @Html.DisplayFor(model => model.Horticulture_Operations_Management)
+        </div>
+        <div>
+            <b>Horticulture Science: </b> @Html.DisplayFor(model => model.Horticulture_Science)
+        </div>
+        <div>
+            <b>Hospital/Facilities Administration: </b> @Html.DisplayFor(model => model.Hospital_Facilities_Administration)
+        </div>
+        <div>
+            <b>Hotel/Motel Management: </b> @Html.DisplayFor(model => model.Hotel_Motel_Management)
+        </div>
+        <div>
+            <b>Human Resources Development/Training: </b> @Html.DisplayFor(model => model.Human_Resources_Development_Training)
+        </div>
+        <div>
+            <b>Human Resources Management: </b> @Html.DisplayFor(model => model.Human_Resources_Management)
+        </div>
+        <div>
+            <b>Industrial Design: </b> @Html.DisplayFor(model => model.Industrial_Design)
+        </div>
+        <div>
+            <b>Industrial Engineering: </b> @Html.DisplayFor(model => model.Industrial_Engineering)
+        </div>
+        <div>
+            <b>Industrial Production Technologies: </b> @Html.DisplayFor(model => model.Industrial_Production_Technologies)
+        </div>
+        <div>
+            <b>Information Science: </b> @Html.DisplayFor(model => model.Information_Science)
+        </div>
+        <div>
+            <b>Insurance&Risk Management: </b> @Html.DisplayFor(model => model.Insurance_Risk_Management)
+        </div>
+        <div>
+            <b>Interior Architecture: </b> @Html.DisplayFor(model => model.Interior_Architecture)
+        </div>
+        <div>
+            <b>Interior Design: </b> @Html.DisplayFor(model => model.Interior_Design)
+        </div>
+        <div>
+            <b>International Business Management: </b> @Html.DisplayFor(model => model.International_Business_Management)
+        </div>
+        <div>
+            <b>International Relations&Affairs: </b> @Html.DisplayFor(model => model.International_Relations_Affairs)
+        </div>
+        <div>
+            <b>Investments&Securities: </b> @Html.DisplayFor(model => model.Investments_Securities)
+        </div>
+        <div>
+            <b>Journalism Broadcast: </b> @Html.DisplayFor(model => model.Journalism_Broadcast)
+        </div>
+        <div>
+            <b>Journalism Print: </b> @Html.DisplayFor(model => model.Journalism_Print)
+        </div>
+        <div>
+            <b>Junior High/Middle School Education: </b> @Html.DisplayFor(model => model.Junior_High_Middle_School_Education)
+        </div>
+        <div>
+            <b>Labor/Industrial Relations: </b> @Html.DisplayFor(model => model.Labor_Industrial_Relations)
+        </div>
+        <div>
+            <b>Landscape Architecture: </b> @Html.DisplayFor(model => model.Landscape_Architecture)
+        </div>
+        <div>
+            <b>Latin American Area Studies: </b> @Html.DisplayFor(model => model.Latin_American_Area_Studies)
+        </div>
+        <div>
+            <b>Latino/Chicano Studies: </b> @Html.DisplayFor(model => model.Latino_Chicano_Studies)
+        </div>
+        <div>
+            <b>Law(Pre-Law): </b> @Html.DisplayFor(model => model.Law_Pre_Law)
+        </div>
+        <div>
+            <b>Law Enforcement: </b> @Html.DisplayFor(model => model.Law_Enforcement)
+        </div>
+        <div>
+            <b>Legal Administrative Assisting/Secretarial: </b> @Html.DisplayFor(model => model.Legal_Administrative_Assisting_Secretarial)
+        </div>
+        <div>
+            <b>Legal Studies,General: </b> @Html.DisplayFor(model => model.Legal_Studies_General)
+        </div>
+        <div>
+            <b>Liberal Arts&General Studies: </b> @Html.DisplayFor(model => model.Liberal_Arts_General_Studies)
+        </div>
+        <div>
+            <b>Library Science: </b> @Html.DisplayFor(model => model.Library_Science)
+        </div>
+        <div>
+            <b>Linguistics: </b> @Html.DisplayFor(model => model.Linguistics)
+        </div>
+        <div>
+            <b>Logistics&Materials Management: </b> @Html.DisplayFor(model => model.Logistics_Materials_Management)
+        </div>
+        <div>
+            <b>Machine Tool Technology: </b> @Html.DisplayFor(model => model.Machine_Tool_Technology)
+        </div>
+        <div>
+            <b>Management Information Systems: </b> @Html.DisplayFor(model => model.Management_Information_Systems)
+        </div>
+        <div>
+            <b>Marine/Aquatic Biology: </b> @Html.DisplayFor(model => model.Marine_Aquatic_Biology)
+        </div>
+        <div>
+            <b>Marketing Management&Research: </b> @Html.DisplayFor(model => model.Marketing_Management_Research)
+        </div>
+        <div>
+            <b>Mass Communications: </b> @Html.DisplayFor(model => model.Mass_Communications)
+        </div>
+        <div>
+            <b>Massage Therapy: </b> @Html.DisplayFor(model => model.Massage_Therapy)
+        </div>
+        <div>
+            <b>Mathematics Education: </b> @Html.DisplayFor(model => model.Mathematics_Education)
+        </div>
+        <div>
+            <b>Mathematics,General: </b> @Html.DisplayFor(model => model.Mathematics_General)
+        </div>
+        <div>
+            <b>Mechanical Drafting/CAD Technology: </b> @Html.DisplayFor(model => model.Mechanical_Drafting_CAD_Technology)
+        </div>
+        <div>
+            <b>Mechanical Engineering: </b> @Html.DisplayFor(model => model.Mechanical_Engineering)
+        </div>
+        <div>
+            <b>Mechanical Engineering Technology: </b> @Html.DisplayFor(model => model.Mechanical_Engineering_Technology)
+        </div>
+        <div>
+            <b>Mechanics&Repairers,General: </b> @Html.DisplayFor(model => model.Mechanics_Repairers_General)
+        </div>
+        <div>
+            <b>Medical Assisting: </b> @Html.DisplayFor(model => model.Medical_Assisting)
+        </div>
+        <div>
+            <b>Medical Laboratory Technology: </b> @Html.DisplayFor(model => model.Medical_Laboratory_Technology)
+        </div>
+        <div>
+            <b>Medical Office/Secretarial: </b> @Html.DisplayFor(model => model.Medical_Office_Secretarial)
+        </div>
+        <div>
+            <b>Medical Radiologic Technology: </b> @Html.DisplayFor(model => model.Medical_Radiologic_Technology)
+        </div>
+        <div>
+            <b>Medical Records: </b> @Html.DisplayFor(model => model.Medical_Records)
+        </div>
+        <div>
+            <b>Medical/Clinical Assisting,General: </b> @Html.DisplayFor(model => model.Medical_Clinical_Assisting_General)
+        </div>
+        <div>
+            <b>Medicine(Pre-Medicine): </b> @Html.DisplayFor(model => model.Medicine_Pre_Medicine)
+        </div>
+        <div>
+            <b>Mental Health Counseling: </b> @Html.DisplayFor(model => model.Mental_Health_Counseling)
+        </div>
+        <div>
+            <b>Microbiology&Immunology: </b> @Html.DisplayFor(model => model.Microbiology_Immunology)
+        </div>
+        <div>
+            <b>Middle Eastern Languages&Literatures: </b> @Html.DisplayFor(model => model.Middle_Eastern_Languages_Literatures)
+        </div>
+        <div>
+            <b>Military Technologies: </b> @Html.DisplayFor(model => model.Military_Technologies)
+        </div>
+        <div>
+            <b>Multi-/Interdisciplinary Studies: </b> @Html.DisplayFor(model => model.Multi_Interdisciplinary_Studies)
+        </div>
+        <div>
+            <b>Multimedia/Animation/Special Effects: </b> @Html.DisplayFor(model => model.Multimedia_Animation_Special_Effects)
+        </div>
+        <div>
+            <b>Music Education: </b> @Html.DisplayFor(model => model.Music_Education)
+        </div>
+        <div>
+            <b>Music,General: </b> @Html.DisplayFor(model => model.Music_General)
+        </div>
+        <div>
+            <b>Music,Performance: </b> @Html.DisplayFor(model => model.Music_Performance)
+        </div>
+        <div>
+            <b>Music,Theory&Composition: </b> @Html.DisplayFor(model => model.Music_Theory_Composition)
+        </div>
+        <div>
+            <b>Natural Resources Conservation,General: </b> @Html.DisplayFor(model => model.Natural_Resources_Conservation_General)
+        </div>
+        <div>
+            <b>Natural Resources Management: </b> @Html.DisplayFor(model => model.Natural_Resources_Management)
+        </div>
+        <div>
+            <b>North American Area Studies: </b> @Html.DisplayFor(model => model.North_American_Area_Studies)
+        </div>
+        <div>
+            <b>Nuclear Engineering: </b> @Html.DisplayFor(model => model.Nuclear_Engineering)
+        </div>
+        <div>
+            <b>Nuclear Medicine Technology: </b> @Html.DisplayFor(model => model.Nuclear_Medicine_Technology)
+        </div>
+        <div>
+            <b>Nursing,Practical/Vocational(LPN): </b> @Html.DisplayFor(model => model.Nursing_Practical_Vocational_LPN)
+        </div>
+        <div>
+            <b>Nursing,Registered(BS/RN): </b> @Html.DisplayFor(model => model.Nursing_Registered_BS_RN)
+        </div>
+        <div>
+            <b>Occupational Therapy: </b> @Html.DisplayFor(model => model.Occupational_Therapy)
+        </div>
+        <div>
+            <b>Occupational Therapy Assisting: </b> @Html.DisplayFor(model => model.Occupational_Therapy_Assisting)
+        </div>
+        <div>
+            <b>Office Supervision&Management: </b> @Html.DisplayFor(model => model.Office_Supervision_Management)
+        </div>
+        <div>
+            <b>Operations Management&Supervision: </b> @Html.DisplayFor(model => model.Operations_Management_Supervision)
+        </div>
+        <div>
+            <b>Optometry(Pre-Optometry): </b> @Html.DisplayFor(model => model.Optometry_Pre_Optometry)
+        </div>
+        <div>
+            <b>Organizational Behavior: </b> @Html.DisplayFor(model => model.Organizational_Behavior)
+        </div>
+        <div>
+            <b>Osteopathic Medicine: </b> @Html.DisplayFor(model => model.Osteopathic_Medicine)
+        </div>
+        <div>
+            <b>Paralegal/Legal Assistant: </b> @Html.DisplayFor(model => model.Paralegal_Legal_Assistant)
+        </div>
+        <div>
+            <b>Parks Recreation&Leisure,General: </b> @Html.DisplayFor(model => model.Parks_Recreation_Leisure_General)
+        </div>
+        <div>
+            <b>Parks/Rec/Leisure Facilities Management: </b> @Html.DisplayFor(model => model.Parks_Rec_Leisure_Facilities_Management)
+        </div>
+        <div>
+            <b>Personal Services,General: </b> @Html.DisplayFor(model => model.Personal_Services_General)
+        </div>
+        <div>
+            <b>Pharmacy(Pre-Pharmacy): </b> @Html.DisplayFor(model => model.Pharmacy_Pre_Pharmacy)
+        </div>
+        <div>
+            <b>Philosophy: </b> @Html.DisplayFor(model => model.Philosophy)
+        </div>
+        <div>
+            <b>Photography: </b> @Html.DisplayFor(model => model.Photography)
+        </div>
+        <div>
+            <b>Physical Education&Coaching: </b> @Html.DisplayFor(model => model.Physical_Education_Coaching)
+        </div>
+        <div>
+            <b>Physical Sciences,General: </b> @Html.DisplayFor(model => model.Physical_Sciences_General)
+        </div>
+        <div>
+            <b>Physical Therapy Pre-Physical Therapy: </b> @Html.DisplayFor(model => model.Physical_Therapy_Pre_Physical_Therapy)
+        </div>
+        <div>
+            <b>Physical Therapy Assisting: </b> @Html.DisplayFor(model => model.Physical_Therapy_Assisting)
+        </div>
+        <div>
+            <b>Physician Assisting: </b> @Html.DisplayFor(model => model.Physician_Assisting)
+        </div>
+        <div>
+            <b>Physics: </b> @Html.DisplayFor(model => model.Physics)
+        </div>
+        <div>
+            <b>Political Science&Government: </b> @Html.DisplayFor(model => model.Political_Science_Government)
+        </div>
+        <div>
+            <b>Postsecondary Education: </b> @Html.DisplayFor(model => model.Postsecondary_Education)
+        </div>
+        <div>
+            <b>Precision Production Trades,General: </b> @Html.DisplayFor(model => model.Precision_Production_Trades_General)
+        </div>
+        <div>
+            <b>Protective Services,General: </b> @Html.DisplayFor(model => model.Protective_Services_General)
+        </div>
+        <div>
+            <b>Psychiatric/Mental Health Technician: </b> @Html.DisplayFor(model => model.Psychiatric_Mental_Health_Technician)
+        </div>
+        <div>
+            <b>Psychology,Clinical&Counseling: </b> @Html.DisplayFor(model => model.Psychology_Clinical_Counseling)
+        </div>
+        <div>
+            <b>Psychology,General: </b> @Html.DisplayFor(model => model.Psychology_General)
+        </div>
+        <div>
+            <b>Public Administration: </b> @Html.DisplayFor(model => model.Public_Administration)
+        </div>
+        <div>
+            <b>Public Administration&Services,General: </b> @Html.DisplayFor(model => model.Public_Administration_Services_General)
+        </div>
+        <div>
+            <b>Public Affairs&Public Policy Analysis: </b> @Html.DisplayFor(model => model.Public_Affairs_Public_Policy_Analysis)
+        </div>
+        <div>
+            <b>Public Health: </b> @Html.DisplayFor(model => model.Public_Health)
+        </div>
+        <div>
+            <b>Public Relations&Organizational Communication: </b> @Html.DisplayFor(model => model.Public_Relations_Organizational_Communication)
+        </div>
+        <div>
+            <b>Public Speaking: </b> @Html.DisplayFor(model => model.Public_Speaking)
+        </div>
+        <div>
+            <b>Purchasing/Procurement/Contracts Management: </b> @Html.DisplayFor(model => model.Purchasing_Procurement_Contracts_Management)
+        </div>
+        <div>
+            <b>Quality Control&Safety Technologies: </b> @Html.DisplayFor(model => model.Quality_Control_Safety_Technologies)
+        </div>
+        <div>
+            <b>Radio&Television Broadcasting: </b> @Html.DisplayFor(model => model.Radio_Television_Broadcasting)
+        </div>
+        <div>
+            <b>Radio&Television Broadcasting Technology: </b> @Html.DisplayFor(model => model.Radio_Television_Broadcasting_Technology)
+        </div>
+        <div>
+            <b>Real Estate: </b> @Html.DisplayFor(model => model.Real_Estate)
+        </div>
+        <div>
+            <b>Rehabilitation Therapy: </b> @Html.DisplayFor(model => model.Rehabilitation_Therapy)
+        </div>
+        <div>
+            <b>Religion: </b> @Html.DisplayFor(model => model.Religion)
+        </div>
+        <div>
+            <b>Religious Education: </b> @Html.DisplayFor(model => model.Religious_Education)
+        </div>
+        <div>
+            <b>Respiratory Therapy Technology: </b> @Html.DisplayFor(model => model.Respiratory_Therapy_Technology)
+        </div>
+        <div>
+            <b>Restaurant/Food Services Management: </b> @Html.DisplayFor(model => model.Restaurant_Food_Services_Management)
+        </div>
+        <div>
+            <b>Sales,Merchandising&Marketing,General: </b> @Html.DisplayFor(model => model.Sales_Merchandising_Marketing_General)
+        </div>
+        <div>
+            <b>Science Education: </b> @Html.DisplayFor(model => model.Science_Education)
+        </div>
+        <div>
+            <b>Secondary Education: </b> @Html.DisplayFor(model => model.Secondary_Education)
+        </div>
+        <div>
+            <b>Secretarial Studies&Office Administration: </b> @Html.DisplayFor(model => model.Secretarial_Studies_Office_Administration)
+        </div>
+        <div>
+            <b>Small Business Management/Operations: </b> @Html.DisplayFor(model => model.Small_Business_Management_Operations)
+        </div>
+        <div>
+            <b>Social Sciences,General: </b> @Html.DisplayFor(model => model.Social_Sciences_General)
+        </div>
+        <div>
+            <b>Social Studies/Sciences Education: </b> @Html.DisplayFor(model => model.Social_Studies_Sciences_Education)
+        </div>
+        <div>
+            <b>Social Work: </b> @Html.DisplayFor(model => model.Social_Work)
+        </div>
+        <div>
+            <b>Sociology: </b> @Html.DisplayFor(model => model.Sociology)
+        </div>
+        <div>
+            <b>Spanish Language&Literature: </b> @Html.DisplayFor(model => model.Spanish_Language_Literature)
+        </div>
+        <div>
+            <b>Special Education: </b> @Html.DisplayFor(model => model.Special_Education)
+        </div>
+        <div>
+            <b>Sport&Fitness Administration/Management: </b> @Html.DisplayFor(model => model.Sport_Fitness_Administration_Management)
+        </div>
+        <div>
+            <b>Statistics: </b> @Html.DisplayFor(model => model.Statistics)
+        </div>
+        <div>
+            <b>Surgical Technology: </b> @Html.DisplayFor(model => model.Surgical_Technology)
+        </div>
+        <div>
+            <b>Surveying Technology: </b> @Html.DisplayFor(model => model.Surveying_Technology)
+        </div>
+        <div>
+            <b>Teacher Assisting/Aide Education: </b> @Html.DisplayFor(model => model.Teacher_Assisting_Aide_Education)
+        </div>
+        <div>
+            <b>Teacher Education,General: </b> @Html.DisplayFor(model => model.Teacher_Education_General)
+        </div>
+        <div>
+            <b>Teacher Education,Subject-Specific: </b> @Html.DisplayFor(model => model.Teacher_Education_Subject_Specific)
+        </div>
+        <div>
+            <b>Textile&Apparel: </b> @Html.DisplayFor(model => model.Textile_Apparel)
+        </div>
+        <div>
+            <b>Theatre Arts/Drama: </b> @Html.DisplayFor(model => model.Theatre_Arts_Drama)
+        </div>
+        <div>
+            <b>Theology,General: </b> @Html.DisplayFor(model => model.Theology_General)
+        </div>
+        <div>
+            <b>Therapy&Rehabilitation,General: </b> @Html.DisplayFor(model => model.Therapy_Rehabilitation_General)
+        </div>
+        <div>
+            <b>Tourism&Travel Marketing: </b> @Html.DisplayFor(model => model.Tourism_Travel_Marketing)
+        </div>
+        <div>
+            <b>Transportation/Materials Moving(e.g.air,ground,marine): </b> @Html.DisplayFor(model => model.Transportation_Materials_Moving_e_g_air_ground_marine)
+        </div>
+        <div>
+            <b>Travel/Tourism Management: </b> @Html.DisplayFor(model => model.Travel_Tourism_Management)
+        </div>
+        <div>
+            <b>Urban Studies/Urban Affairs: </b> @Html.DisplayFor(model => model.Urban_Studies_Urban_Affairs)
+        </div>
+        <div>
+            <b>Veterinarian Assisting/Technology: </b> @Html.DisplayFor(model => model.Veterinarian_Assisting_Technology)
+        </div>
+        <div>
+            <b>Veterinary Medicine(Pre-Veterinarian): </b> @Html.DisplayFor(model => model.Veterinary_Medicine_Pre_Veterinarian)
+        </div>
+        <div>
+            <b>Vocational Rehabilitation Counseling: </b> @Html.DisplayFor(model => model.Vocational_Rehabilitation_Counseling)
+        </div>
+        <div>
+            <b>Webpage Design: </b> @Html.DisplayFor(model => model.Webpage_Design)
+        </div>
+        <div>
+            <b>Welding Technology: </b> @Html.DisplayFor(model => model.Welding_Technology)
+        </div>
+        <div>
+            <b>Wildlife&Wildlands Management: </b> @Html.DisplayFor(model => model.Wildlife_Wildlands_Management)
+        </div>
+        <div>
+            <b>Women's Studies: </b> @Html.DisplayFor(model => model.Women_s_Studies)
+        </div>
+        <div>
+            <b>Zoology: </b> @Html.DisplayFor(model => model.Zoology)
+        </div>
+    </div>
+</body>
+</html>

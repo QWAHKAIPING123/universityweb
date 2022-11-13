@@ -1,0 +1,689 @@
+﻿@model IEnumerable<UniversityWebApplication.Models.UniversityInfo>
+@{
+    Layout = null;
+}
+<h1 align="center">University Database</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*<divnk rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
+    <title>University Database</title>
+    <style>
+        body {
+            font-family: "Times New Roman";
+            background-color: lightgray;
+            margin: 0;
+        }
+        /*        .content-side {
+            font-size: 0px;
+        }*/
+
+        .content-side .col-md-6 {
+            /*           float: none !important;*/
+            /*display: inline-block;*/
+            vertical-align: top;
+            /*            font-size: 14px;*/
+        }
+
+        /*        .content-side > * {
+            font-size: 14px;
+        }*/
+        #before {
+            float: left;
+        }
+
+        #after {
+            text-align: center;
+        }
+
+        h1 {
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+
+        h3 {
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+
+        h4 {
+            background-color: grey;
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+
+        th, td {
+            border-bottom: 20px solid lightgrey;
+        }
+
+        a {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            align-self: center;
+            display: block;
+            text-align: center;
+            margin-left: 50%;
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 9px;
+            margin-left: 50%;
+            width: 45%;
+            border: none;
+            text-align: center;
+            outline: auto;
+            font-size: 15px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+        .content {
+            padding: 0 9px;
+            margin-left: 50%;
+            width: 45%;
+            text-align: center;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            outline: auto;
+            background-color: #f1f1f1;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <p>
+        @ViewBag.UniversityList
+    </p>
+    @using (Html.BeginForm("Demo", "UniversityInfoes"))
+    {
+        <p style="text-align:center">
+            <input type="submit" value="Show Results" style="background:none; border-width:0px; color:black; font-size:25px" />
+        </p>
+        <div id="before">
+            <div button class="collapsible">Domestic Undergraduate Tuition per Semester</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "0,500") $0 to $500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "500,1000") $500 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "1000,1500") $1000 to $1500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "1500,2000") $1500 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "2000,2500") $2000 to $2500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "2500,3000") $2500 to $3000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "3000,3500") $3000 to $3500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "3500,4000") $3500 to $4000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "4000,4500") $4000 to $4500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "4500,5000") $4500 to $5000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "5000,10000") $5000 to $10000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "10000,15000") $10000 to $15000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "15000,20000") $15000 to $20000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomUnderRange", "20000,1.7976931348623157E+308") $20000 and above</div>
+            </div>
+            <div button class="collapsible">International Undergraduate Tuition per Semester</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "0,1000") $0 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "1000,2000") $1000 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "2000,3000") $2000 to $3000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "3000,4000") $3000 to $4000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "4000,5000") $4000 to $5000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "5000,6000") $5000 to $6000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "6000,6000") $6000 to $7000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "7000,8000") $7000 to $8000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "8000,9000") $8000 to $9000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "9000,10000") $9000 to $10000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "10000,15000") $10000 to $15000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "15000,16000") $15000 to $16000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "16000,17000") $16000 to $17000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "17000,18000") $17000 to $18000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "18000,19000") $18000 to $19000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "19000,1.7976931348623157E+308") $19000 and above</div>
+            </div>
+            <div button class="collapsible">International Undergraduate Tuition per Semester</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "0,1000") $0 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "1000,2000") $1000 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "2000,3000") $2000 to $3000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "3000,4000") $3000 to $4000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "4000,5000") $4000 to $5000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "5000,6000") $5000 to $6000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "6000,6000") $6000 to $7000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "7000,8000") $7000 to $8000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "8000,9000") $8000 to $9000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "9000,10000") $9000 to $10000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "10000,15000") $10000 to $15000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "15000,16000") $15000 to $16000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "16000,17000") $16000 to $17000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "17000,18000") $17000 to $18000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "18000,19000") $18000 to $19000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntUnderRange", "19000,1.7976931348623157E+308") $19000 and above</div>
+            </div>
+            <div button class="collapsible">Domestic Postgraduate(Masters) Tuition per Semester</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "0,500") $0 to $500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "500,1000") $500 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "1000,1500") $1000 to $1500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "1500,2000") $1500 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "2000,2500") $2000 to $2500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "2500,3000") $2500 to $3000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "3000,3500") $3000 to $3500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "3500,4000") $3500 to $4000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "4000,4500") $4000 to $4500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "4500,5000") $4500 to $5000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "5000,10000") $5000 to $10000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "10000,11000") $10000 to $11000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "11000,12000") $11000 to $12000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "12000,13000") $12000 to $13000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "13000,14000") $13000 to $14000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionDomPostRange", "14000,1.7976931348623157E+308") $14000 and above</div>
+            </div>
+            <div button class="collapsible">International Postgraduate(Masters) Tuition per Semester</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "0,500") $0 to $500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "500,1000") $500 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "1000,1500") $1000 to $1500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "1500,2000") $1500 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "2000,2500") $2000 to $2500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "2500,3000") $2500 to $3000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "3000,3500") $3000 to $3500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "3500,4000") $3500 to $4000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "4000,4500") $4000 to $4500</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "4500,5000") $4500 to $5000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "5000,6000") $5000 to $6000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "6000,7000") $6000 to $7000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "7000,8000") $7000 to $8000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "8000,9000") $8000 to $9000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "9000,10000") $9000 to $10000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "10000,15000") $10000 to $15000</div>
+                <div class="list-group-item">@Html.RadioButton("TuitionIntPostRange", "15000,1.7976931348623157E+308") $15000 and above</div>
+            </div>
+            <div button class="collapsible">Cost of Living per Month</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "0,100") $0 to $100</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "100,200") $100 to $200</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "200,300") $200 to $300</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "300,400") $300 to $400</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "400,500") $400 to $500</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "500,1000") $500 to $1000</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "1000,1500") $1000 to $1500</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "1500,2000") $1500 to $2000</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "2000,2500") $2000 to $2500</div>
+                <div class="list-group-item">@Html.RadioButton("CostOfLivingRange", "2500,1.7976931348623157E+308") $2500 and above</div>
+            </div>
+            <div button class="collapsible">Country</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("Country", "Malaysia") Malaysia</div>
+                <div class="list-group-item">@Html.RadioButton("Country", "Singapore") Singapore</div>
+                <div class="list-group-item">@Html.RadioButton("Country", "Australia") Australia</div>
+                <div class="list-group-item">@Html.RadioButton("Country", "Switzerland") Switzerland</div>
+            </div>
+            <div button class="collapsible">Type</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("Type", "Public") Public</div>
+                <div class="list-group-item">@Html.RadioButton("Type", "Private") Private</div>
+            </div>
+            <div button class="collapsible">Campus Setting</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("Campus_Setting", "Urban") Urban</div>
+                <div class="list-group-item">@Html.RadioButton("Campus_Setting", "Suburban") Suburban</div>
+                <div class="list-group-item">@Html.RadioButton("Campus_Setting", "Rural") Rural</div>
+            </div>
+            <div button class="collapsible">Qualification Type</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "A-Level") A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Alim") Alim</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "American High School Diploma") American High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Australia Capital Territory Senior Secondary Certificate") Australia Capital Territory Senior Secondary Certificate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Australian High School Diploma") Australian High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Australian Matriculation(AUSMAT)") Australian Matriculation(AUSMAT)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Australian Tertiary Admission Rank(ATAR)") Australian Tertiary Admission Rank(ATAR)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Bangladesh High School Diploma") Bangladesh High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Brunei A-Level") Brunei A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canada Alberta High School") Canada Alberta High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canada British Columbia Certification Grading(BCCG)") Canada British Columbia Certification Grading(BCCG)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canada Nova Scotia Diploma") Canada Nova Scotia Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canada Ontario Secondary School Diploma(OSSD)") Canada Ontario Secondary School Diploma(OSSD)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canadian High School Diploma") Canadian High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canadian Matriculation") Canadian Matriculation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Canadian Pre-University(CPU)") Canadian Pre-University(CPU)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Caribbean Advanced Proficiency Examination(CAPE)") Caribbean Advanced Proficiency Examination(CAPE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "China National College Entrance Examination") China National College Entrance Examination</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "China Vocational Secondary School Diploma") Jixiao</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "China Vocational Secondary School Diploma") Zhigao</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "China Vocational Secondary School Diploma") Zhixiao</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Commencing Monash University Foundation Year(MUFY)") Commencing Monash University Foundation Year(MUFY)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Danish Studentereksamen") Danish Studentereksamen(Upper Secondary Leaving Examination)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Diploma of Higher Education Studies(DHES)") Diploma of Higher Education Studies(DHES)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Diploma of Tertiary Studies(DoTS)") Diploma of Tertiary Studies(DoTS)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "European Baccalaureate") European Baccalaureate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Fijian Seventh Form") Fijian Seventh Form</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Finland Ylioppilastutkinto") Finland Ylioppilastutkinto</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Finnish Matriculation") Finnish Matriculation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Foundation in Engineering") Foundation in Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Foundation in Science") Foundation in Science</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Foundation") Foundation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "French Baccalaureate") French Baccalaureate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "German Arbitur") German Arbitur</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Hong Kong A-Level") Hong Kong A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Hong Kong Diploma of Secondary Education(HKDSE)") Hong Kong Diploma of Secondary Education(HKDSE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "India ASSC") India ASSC</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "India Central Board of Secondary Education(CBSE)") India Central Board of Secondary Education(CBSE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "India Higher Secondary School Certificate(HSSE) 6 states") India Higher Secondary School Certificate(HSSE) 6 states</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Indian School Certificate(ISC)") Indian School Certificate(ISC)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Indian Standard 12") Indian Standard 12</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Indonesia Upper Secondary School(SMA3)") Indonesia Upper Secondary School(SMA3)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Indonesian National Exam(UAN)") Indonesian National Exam(UAN)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "International Baccalaureate(IB)") International Baccalaureate(IB)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Interstate Year 12") Interstate Year 12</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Iran High School Diploma") Iran High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Irish Leaving Certificate") Irish Leaving Certificate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Israel Bagrut") Israel Bagrut</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Italian Diploma di Esame di Stato") Italian Diploma di Esame di Stato</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Kenya Certificate of Secondary Education") Kenya Certificate of Secondary Education</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Certificate of Education(SPM)") Malaysian Certificate of Education(SPM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Higher Religion School Certificate(STAM)") Malaysian Higher Religion School Certificate(STAM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Higher School Certificate(STPM)") Malaysian Higher School Certificate(STPM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Matriculation") Malaysian Matriculation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Taylors University Foundation in Science") Malaysian Taylors University Foundation in Science</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Malaysian Vocational Certificate(SVM)") Malaysian Vocational Certificate(SVM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Mauritis A-Level") Mauritis A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Mauritis High School Diploma") Mauritis High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Monash College Diploma Part 1 & Part 2") Monash College Diploma Part 1 & Part 2</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Myanmar Matriculation Exam") Myanmar Matriculation Exam</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "National Examinations Council(NECO)") National Examinations Council(NECO)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Netherlands Dutch Diploma of Pre-University Education") Netherlands Dutch Diploma of Pre-University Education</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "New South Wales Certificate of Education(NSWCE)") New South Wales Certificate of Education(NSWCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "New South Wales(NSW) High School Diploma") New South Wales(NSW) High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "New Zealand Certificate in Educational Achievement(NCEA)") New Zealand Certificate in Educational Achievement(NCEA)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "New Zealand Taylors Auckland Foundation Year") New Zealand Taylors Auckland Foundation Year</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Northern Consortium United Kingdom's International Foundation Year") Northern Consortium United Kingdom's International Foundation Year</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Northern Territory Certificate of Education(NTCE)") Northern Territory Certificate of Education(NTCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Norway Certificate for Upper Secondary Education(Vitnemal)") Norway Certificate for Upper Secondary Education(Vitnemal)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "NUS High School Diploma") NUS High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Oman Thanawiya Amma(Secondary School Leaving Certificate)") Oman Thanawiya Amma(Secondary School Leaving Certificate)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Pakistan High School Diploma") Pakistan High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Philippines High School Diploma") Philippines High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Polytechnic Diploma") Polytechnic Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Portuguese Certificate of Secondary Education") Portuguese Certificate of Secondary Education</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "PRC National College Entrance Exam(NCEE)") PRC National College Entrance Exam(NCEE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Queensland Certificate of Education(QCE)") Queensland Certificate of Education(QCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Saint Mary''s University Junior and Science High School") Saint Mary''s University Junior and Science High School</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Scottish Qualifications Certificate") Scottish Qualifications Certificate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Singapore A-Level") Singapore A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "South Africa Foundation") South Africa Foundation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "South Africa National Senior Certificate") South Africa National Senior Certificate</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "South Australian Certificate of Education(SACE) International") South Australian Certificate of Education(SACE) International</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "South Korean College Scholastic Ability Test(CSAT)") South Korean College Scholastic Ability Test(CSAT)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "South Korean General High School Diploma(Ilbankye Kodung Hakkyo)") South Korean General High School Diploma(Ilbankye Kodung Hakkyo)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Southern Australian Matriculation(SAM)") Southern Australian Matriculation(SAM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Special Tertiary Admissions Test(STAT)") Special Tertiary Admissions Test(STAT)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Sri Lanka A-Level") Sri Lanka A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Sri Lanka Original Level(O-Level) General Certificate of Education(GCE)") Sri Lanka Original Level(O-Level) General Certificate of Education(GCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Sunway Foundation") Sunway Foundation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "SVM") Sijil Vokasional Malaysia(SVM)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Sweden Slutbetyg") Sweden Slutbetyg</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Switzerland Cantonal Matura Commission(CMC)") Switzerland Cantonal Matura Commission(CMC)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Switzerland Matriculation") Switzerland Matriculation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Taiwan General Scholastic Ability Test(GSAT)") Taiwan General Scholastic Ability Test(GSAT)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Taiwan Senior High School") Taiwan Senior High School</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Taiwan Senior High School/University & Colleges Joint Entrance Examination") Taiwan Senior High School/University & Colleges Joint Entrance Examination</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Tasmanian Certificate of Education(TCE)") Tasmanian Certificate of Education(TCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Technical and Further Education(TAFE)") Technical and Further Education(TAFE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Thailand Upper Secondary(Matayom Suksa 6)") Thailand Upper Secondary(Matayom Suksa 6)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Turkish High School Diploma") Turkish High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Unified Exam Certificate(UEC)") Unified Exam Certificate Malaysia(UEC)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "United Kingdom A-Level") United Kingdom A-Level</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "United Kingdom Higher National Diploma(HND)") United Kingdom Higher National Diploma(HND)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "University Foundation Year(UFY)") University Foundation Year(UFY)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "University of Auckland Certificate in Foundation Studies") University of Auckland Certificate in Foundation Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "UNSW Foundation") UNSW Foundation</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Victorian Certificate of Education(VCE)") Victorian Certificate of Education(VCE)</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Vietnam High School Diploma") Vietnam High School Diploma</div>
+                <div class="list-group-item">@Html.RadioButton("Qualification_Type", "Western Australia Certificate of Education(WACE)") Western Australia Certificate of Education(WACE)</div>
+            </div>
+            <div button class="collapsible">Majors</div>
+            <div class="content">
+                <div class="list-group-item">@Html.RadioButton("Accounting", true)Accounting</div>
+                <div class="list-group-item">@Html.RadioButton("Accounting_Technician", true)Accounting Technician</div>
+                <div class="list-group-item">@Html.RadioButton("Actuarial_Science", true)Actuarial Science</div>
+                <div class="list-group-item">@Html.RadioButton("Adult_Development_Aging_Gerontology", true)Adult Development&Aging/Gerontology</div>
+                <div class="list-group-item">@Html.RadioButton("Advertising", true)Advertising</div>
+                <div class="list-group-item">@Html.RadioButton("Aeronautical_Astronautical_Engineering", true)Aeronautical&Astronautical Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Aeronautical_Astronautical_Engineering_Technologies", true)Aeronautical&Astronautical Engineering Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("African_American_Studies", true)African American Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Agribusiness_Operations", true)Agribusiness Operations</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Bioengineering", true)Agricultural/Bioengineering</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Business_Management", true)Agricultural Business&Management</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Economics", true)Agricultural Economics</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Education", true)Agricultural Education</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Mechanization", true)Agricultural Mechanization</div>
+                <div class="list-group-item">@Html.RadioButton("Agricultural_Production", true)Agricultural Production</div>
+                <div class="list-group-item">@Html.RadioButton("Agriculture_General", true)Agriculture,General</div>
+                <div class="list-group-item">@Html.RadioButton("Agronomy_Crop_Science", true)Agronomy&Crop Science</div>
+                <div class="list-group-item">@Html.RadioButton("Aircraft_Mechanics_Technology", true)Aircraft Mechanics/Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Aircraft_Piloting_Navigation", true)Aircraft Piloting&Navigation</div>
+                <div class="list-group-item">@Html.RadioButton("Alcohol_Drug_Abuse_Counseling", true)Alcohol/Drug Abuse Counseling</div>
+                <div class="list-group-item">@Html.RadioButton("American_English_Literature", true)American/English Literature</div>
+                <div class="list-group-item">@Html.RadioButton("American_Indian_Native_American_Studies", true)American Indian/Native American Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Animal_Sciences", true)Animal Sciences</div>
+                <div class="list-group-item">@Html.RadioButton("Anthropology", true)Anthropology</div>
+                <div class="list-group-item">@Html.RadioButton("Applied_Mathematics", true)Applied Mathematics</div>
+                <div class="list-group-item">@Html.RadioButton("Architectural_Drafting_CAD_Technology", true)Architectural_Drafting_CAD_Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Architectural_Engineering", true)Architectural Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Architectural_Engineering_Technology", true)Architectural Engineering Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Architectural_Environmental_Design", true)Architectural Environmental Design</div>
+                <div class="list-group-item">@Html.RadioButton("Architecture_General", true)Architecture,General</div>
+                <div class="list-group-item">@Html.RadioButton("Area_Studies_General_e_g_African_Middle_Eastern", true)Area Studies,General(e.g.African,Middle Eastern)</div>
+                <div class="list-group-item">@Html.RadioButton("Art_Education", true)Art Education</div>
+                <div class="list-group-item">@Html.RadioButton("Art_General", true)Art,General</div>
+                <div class="list-group-item">@Html.RadioButton("Art_History_Criticism_Conservation", true)Art History,Criticism&Conservation</div>
+                <div class="list-group-item">@Html.RadioButton("Asian_Area_Studies", true)Asian Area Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Asian_Languages_Literatures", true)Asian Languages&Literatures</div>
+                <div class="list-group-item">@Html.RadioButton("Astronomy", true)Astronomy</div>
+                <div class="list-group-item">@Html.RadioButton("Athletic_Training", true)Athletic Training</div>
+                <div class="list-group-item">@Html.RadioButton("Atmospheric_Sciences_Meteorology", true)Atmospheric Sciences&Meteorology</div>
+                <div class="list-group-item">@Html.RadioButton("Autobody_Repair_Technology", true)Autobody Repair/Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Automotive_Engineering_Technology", true)Automotive Engineering Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Automotive_Mechanics_Technology", true)Automotive Mechanics/Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Aviation_Airway_Science_General", true)Aviation&Airway Science,General</div>
+                <div class="list-group-item">@Html.RadioButton("Aviation_Management_Operations", true)Aviation Management&Operations</div>
+                <div class="list-group-item">@Html.RadioButton("Avionics_Technology", true)Avionics Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Banking_Financial_Support_Services", true)Banking&Financial Support Services</div>
+                <div class="list-group-item">@Html.RadioButton("Bible_Biblical_Studies", true)Bible/Biblical Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Biochemistry_Biophysics", true)Biochemistry&Biophysics</div>
+                <div class="list-group-item">@Html.RadioButton("Biology_General", true)Biology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Biomedical_Engineering", true)Biomedical Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Business_Administration_Management_General", true)Business Administration&Management,General</div>
+                <div class="list-group-item">@Html.RadioButton("Business_Education", true)Business Education</div>
+                <div class="list-group-item">@Html.RadioButton("Business_Management_Quantitative_Methods_General", true)Business/Management Quantitative Methods,General</div>
+                <div class="list-group-item">@Html.RadioButton("Business_Managerial_Economics", true)Business/Managerial Economics</div>
+                <div class="list-group-item">@Html.RadioButton("Career_Technical_Education", true)Career&Technical Education</div>
+                <div class="list-group-item">@Html.RadioButton("Cell_Cellular_Biology", true)Cell/Cellular Biology</div>
+                <div class="list-group-item">@Html.RadioButton("Chemical_Engineering", true)Chemical Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Chemistry", true)Chemistry</div>
+                <div class="list-group-item">@Html.RadioButton("Child_Care_Services_Management", true)Child Care Services Management</div>
+                <div class="list-group-item">@Html.RadioButton("Child_Development", true)Child Development</div>
+                <div class="list-group-item">@Html.RadioButton("Chiropractic_Pre_Chiropractic", true)Chiropractic(Pre-Chiropractic)</div>
+                <div class="list-group-item">@Html.RadioButton("Cinema_Film", true)Cinema/Film</div>
+                <div class="list-group-item">@Html.RadioButton("Cinematography_Film_Video_Production", true)Cinematography/Film/Video Production</div>
+                <div class="list-group-item">@Html.RadioButton("City_Urban_Regional_Planning", true)City/Urban/Regional Planning</div>
+                <div class="list-group-item">@Html.RadioButton("Civil_Engineering", true)Civil Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Civil_Engineering_Technology", true)Civil Engineering Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Classical_Ancient_Languages_Literatures", true)Classical/Ancient Languages&Literatures</div>
+                <div class="list-group-item">@Html.RadioButton("Communication_Disorder_Services_e_g_Speech_Pathology", true)Communication Disorder Services(e.g.Speech Pathology)</div>
+                <div class="list-group-item">@Html.RadioButton("Communications_General", true)Communications,General</div>
+                <div class="list-group-item">@Html.RadioButton("Communications_Technology_General", true)Communications Technology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Community_Organization_Advocacy", true)Community Organization&Advocacy</div>
+                <div class="list-group-item">@Html.RadioButton("Comparative_Literature", true)Comparative Literature</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Engineering", true)Computer Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Engineering_Technology", true)Computer Engineering Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Information_Sciences_General", true)Computer&Information Sciences,General</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Networking_Telecommunications", true)Computer Networking/Telecommunications</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Science_Programming", true)Computer Science&Programming</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_Software_Media_Applications", true)Computer Software&Media Applications</div>
+                <div class="list-group-item">@Html.RadioButton("Computer_System_Administration", true)Computer System Administration</div>
+                <div class="list-group-item">@Html.RadioButton("Construction_Building_Technology", true)Construction/Building Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Construction_Engineering_Management", true)Construction Engineering/Management</div>
+                <div class="list-group-item">@Html.RadioButton("Construction_Trades_e_g_carpentry_plumbing_electrical", true)Construction Trades(e.g.carpentry,plumbing,electrical)</div>
+                <div class="list-group-item">@Html.RadioButton("Consumer_Family_Economics", true)Consumer&Family Economics</div>
+                <div class="list-group-item">@Html.RadioButton("Corrections", true)Corrections</div>
+                <div class="list-group-item">@Html.RadioButton("Cosmetology_Hairstyling", true)Cosmetology/Hairstyling</div>
+                <div class="list-group-item">@Html.RadioButton("Counseling_Student_Services", true)Counseling&Student Services</div>
+                <div class="list-group-item">@Html.RadioButton("Court_Reporting", true)Court Reporting</div>
+                <div class="list-group-item">@Html.RadioButton("Creative_Writing", true)Creative Writing</div>
+                <div class="list-group-item">@Html.RadioButton("Criminal_Justice", true)Criminal Justice</div>
+                <div class="list-group-item">@Html.RadioButton("Criminology", true)Criminology</div>
+                <div class="list-group-item">@Html.RadioButton("Culinary_Arts_Chef_Training", true)Culinary Arts/Chef Training</div>
+                <div class="list-group-item">@Html.RadioButton("Curriculum_Instruction", true)Curriculum&Instruction</div>
+                <div class="list-group-item">@Html.RadioButton("Dance", true)Dance</div>
+                <div class="list-group-item">@Html.RadioButton("Data_Management_Technology", true)Data Management Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Dental_Assisting", true)Dental Assisting</div>
+                <div class="list-group-item">@Html.RadioButton("Dental_Hygiene", true)Dental Hygiene</div>
+                <div class="list-group-item">@Html.RadioButton("Dentistry_Pre_Dentistry", true)Dentistry(Pre-Dentistry)</div>
+                <div class="list-group-item">@Html.RadioButton("Design_Visual_Communications_General", true)Design&Visual Communications,General</div>
+                <div class="list-group-item">@Html.RadioButton("Diesel_Mechanics_Technology", true)Diesel Mechanics/Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Digital_Communications_Media", true)Digital Communications/Media</div>
+                <div class="list-group-item">@Html.RadioButton("Divinity_Ministry", true)Divinity/Ministry</div>
+                <div class="list-group-item">@Html.RadioButton("Drafting_CAD_Technology_General", true)Drafting/CAD Technology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Early_Childhood_Education", true)Early Childhood Education</div>
+                <div class="list-group-item">@Html.RadioButton("Ecology", true)Ecology</div>
+                <div class="list-group-item">@Html.RadioButton("Economics", true)Economics</div>
+                <div class="list-group-item">@Html.RadioButton("Educational_Administration", true)Educational Administration</div>
+                <div class="list-group-item">@Html.RadioButton("Electrical_Electronics_Communications_Engineering", true)Electrical,Electronics&Communications Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Electrical_Electronics_Engineering_Technologies", true)Electrical,Electronics Engineering Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Electrical_Electronics_Equip_Installation_Repair", true)Electrical&Electronics Equip Installation&Repair</div>
+                <div class="list-group-item">@Html.RadioButton("Electromechanical_Biomedical_Engineering_Technologies", true)Electromechanical&Biomedical Engineering Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Elementary_Education", true)Elementary Education</div>
+                <div class="list-group-item">@Html.RadioButton("Emergency_Medical_Technology", true)Emergency Medical Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Engineering_Pre_Engineering_General", true)Engineering/Pre-Engineering,General</div>
+                <div class="list-group-item">@Html.RadioButton("Engineering_Technology_General", true)Engineering Technology,General</div>
+                <div class="list-group-item">@Html.RadioButton("English_as_a_Second_Language_Education", true)English-as-a-Second-Language Education</div>
+                <div class="list-group-item">@Html.RadioButton("English_Language_Arts_Education", true)English/Language Arts Education</div>
+                <div class="list-group-item">@Html.RadioButton("English_Language_Literature_General", true)English Language&Literature,General</div>
+                <div class="list-group-item">@Html.RadioButton("Environmental_Control_Technologies", true)Environmental Control Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Environmental_Health_Engineering", true)Environmental Health Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Environmental_Science", true)Environmental Science</div>
+                <div class="list-group-item">@Html.RadioButton("Ethnic_Minority_Studies_General", true)Ethnic&Minority Studies,General</div>
+                <div class="list-group-item">@Html.RadioButton("European_Area_Studies", true)European Area Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Exercise_Science_Physiology_Kinesiology", true)Exercise Science/Physiology/Kinesiology</div>
+                <div class="list-group-item">@Html.RadioButton("Family_Consumer_Sciences_General", true)Family&Consumer Sciences,General</div>
+                <div class="list-group-item">@Html.RadioButton("Fashion_Apparel_Design", true)Fashion/Apparel Design</div>
+                <div class="list-group-item">@Html.RadioButton("Fashion_Merchandising", true)Fashion Merchandising</div>
+                <div class="list-group-item">@Html.RadioButton("Finance_General", true)Finance,General</div>
+                <div class="list-group-item">@Html.RadioButton("Financial_Planning_Services", true)Financial Planning&Services</div>
+                <div class="list-group-item">@Html.RadioButton("Fine_Studio_Arts", true)Fine/Studio Arts</div>
+                <div class="list-group-item">@Html.RadioButton("Fire_Protection_Safety_Technology", true)Fire Protection&Safety Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Food_Nutrition", true)Food&Nutrition</div>
+                <div class="list-group-item">@Html.RadioButton("Food_Sciences_Technology", true)Food Sciences&Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Foreign_Languages_Education", true)Foreign Languages Education</div>
+                <div class="list-group-item">@Html.RadioButton("Foreign_Languages_Literatures_General", true)Foreign Languages/Literatures,General</div>
+                <div class="list-group-item">@Html.RadioButton("Forestry", true)Forestry</div>
+                <div class="list-group-item">@Html.RadioButton("French_Language_Literature", true)French Language&Literature</div>
+                <div class="list-group-item">@Html.RadioButton("Funeral_Services_Mortuary_Science", true)Funeral Services&Mortuary Science</div>
+                <div class="list-group-item">@Html.RadioButton("Genetics", true)Genetics</div>
+                <div class="list-group-item">@Html.RadioButton("Geography", true)Geography</div>
+                <div class="list-group-item">@Html.RadioButton("Geological_Earth_Sciences", true)Geological&Earth Sciences</div>
+                <div class="list-group-item">@Html.RadioButton("German_Language_Literature", true)German Language&Literature</div>
+                <div class="list-group-item">@Html.RadioButton("Graphic_Design", true)Graphic Design</div>
+                <div class="list-group-item">@Html.RadioButton("Graphic_Printing_Equipment_Operation", true)Graphic&Printing Equipment Operation</div>
+                <div class="list-group-item">@Html.RadioButton("Health_Education", true)Health Education</div>
+                <div class="list-group-item">@Html.RadioButton("Health_Medical_Technology_General", true)Health/Medical Technology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Health_Physical_Education_Fitness", true)Health&Physical Education/Fitness</div>
+                <div class="list-group-item">@Html.RadioButton("Health_Related_Professions_Services_General", true)Health-Related Professions&Services,General</div>
+                <div class="list-group-item">@Html.RadioButton("Health_Services_Administration_General", true)Health Services Administration,General</div>
+                <div class="list-group-item">@Html.RadioButton("Heating_Air_Cond_Refrig_Install_Repair", true)Heating/Air-Cond/Refrig Install/Repair</div>
+                <div class="list-group-item">@Html.RadioButton("History", true)History</div>
+                <div class="list-group-item">@Html.RadioButton("Horticulture_Operations_Management", true)Horticulture Operations&Management</div>
+                <div class="list-group-item">@Html.RadioButton("Horticulture_Science", true)Horticulture Science</div>
+                <div class="list-group-item">@Html.RadioButton("Hospital_Facilities_Administration", true)Hospital/Facilities Administration</div>
+                <div class="list-group-item">@Html.RadioButton("Hotel_Motel_Management", true)Hotel/Motel Management</div>
+                <div class="list-group-item">@Html.RadioButton("Human_Resources_Development_Training", true)Human Resources Development/Training</div>
+                <div class="list-group-item">@Html.RadioButton("Human_Resources_Management", true)Human Resources Management</div>
+                <div class="list-group-item">@Html.RadioButton("Industrial_Design", true)Industrial Design</div>
+                <div class="list-group-item">@Html.RadioButton("Industrial_Engineering", true)Industrial Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Industrial_Production_Technologies", true)Industrial Production Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Information_Science", true)Information Science</div>
+                <div class="list-group-item">@Html.RadioButton("Insurance_Risk_Management", true)Insurance&Risk Management</div>
+                <div class="list-group-item">@Html.RadioButton("Interior_Architecture", true)Interior Architecture</div>
+                <div class="list-group-item">@Html.RadioButton("Interior_Design", true)Interior Design</div>
+                <div class="list-group-item">@Html.RadioButton("International_Business_Management", true)International Business Management</div>
+                <div class="list-group-item">@Html.RadioButton("International_Relations_Affairs", true)International Relations&Affairs</div>
+                <div class="list-group-item">@Html.RadioButton("Investments_Securities", true)Investments&Securities</div>
+                <div class="list-group-item">@Html.RadioButton("Journalism_Broadcast", true)Journalism Broadcast</div>
+                <div class="list-group-item">@Html.RadioButton("Journalism_Print", true)Journalism Print</div>
+                <div class="list-group-item">@Html.RadioButton("Junior_High_Middle_School_Education", true)Junior High/Middle School Education</div>
+                <div class="list-group-item">@Html.RadioButton("Labor_Industrial_Relations", true)Labor/Industrial Relations</div>
+                <div class="list-group-item">@Html.RadioButton("Landscape_Architecture", true)Landscape Architecture</div>
+                <div class="list-group-item">@Html.RadioButton("Latin_American_Area_Studies", true)Latin American Area Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Latino_Chicano_Studies", true)Latino/Chicano Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Law_Enforcement", true)Law Enforcement</div>
+                <div class="list-group-item">@Html.RadioButton("Law_Pre_Law", true)Law(Pre-Law)</div>
+                <div class="list-group-item">@Html.RadioButton("Legal_Administrative_Assisting_Secretarial", true)Legal Administrative Assisting/Secretarial</div>
+                <div class="list-group-item">@Html.RadioButton("Legal_Studies_General", true)Legal Studies,General</div>
+                <div class="list-group-item">@Html.RadioButton("Liberal_Arts_General_Studies", true)Liberal Arts&General Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Library_Science", true)Library Science</div>
+                <div class="list-group-item">@Html.RadioButton("Linguistics", true)Linguistics</div>
+                <div class="list-group-item">@Html.RadioButton("Logistics_Materials_Management", true)Logistics&Materials Management</div>
+                <div class="list-group-item">@Html.RadioButton("Machine_Tool_Technology", true)Machine Tool Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Management_Information_Systems", true)Management Information Systems</div>
+                <div class="list-group-item">@Html.RadioButton("Marine_Aquatic_Biology", true)Marine/Aquatic Biology</div>
+                <div class="list-group-item">@Html.RadioButton("Marketing_Management_Research", true)Marketing Management&Research</div>
+                <div class="list-group-item">@Html.RadioButton("Mass_Communications", true)Mass Communications</div>
+                <div class="list-group-item">@Html.RadioButton("Massage_Therapy", true)Massage Therapy</div>
+                <div class="list-group-item">@Html.RadioButton("Mathematics_Education", true)Mathematics Education</div>
+                <div class="list-group-item">@Html.RadioButton("Mathematics_General", true)Mathematics,General</div>
+                <div class="list-group-item">@Html.RadioButton("Mechanical_Drafting_CAD_Technology", true)Mechanical Drafting/CAD Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Mechanical_Engineering", true)Mechanical Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Mechanical_Engineering_Technology", true)Mechanical Engineering Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Mechanics_Repairers_General", true)Mechanics&Repairers,General</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Assisting", true)Medical Assisting</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Clinical_Assisting_General", true)Medical/Clinical Assisting,General</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Laboratory_Technology", true)Medical Laboratory Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Office_Secretarial", true)Medical Office/Secretarial</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Radiologic_Technology", true)Medical Radiologic Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Medical_Records", true)Medical Records</div>
+                <div class="list-group-item">@Html.RadioButton("Medicine_Pre_Medicine", true)Medicine(Pre-Medicine)</div>
+                <div class="list-group-item">@Html.RadioButton("Mental_Health_Counseling", true)Mental Health Counseling</div>
+                <div class="list-group-item">@Html.RadioButton("Microbiology_Immunology", true)Microbiology&Immunology</div>
+                <div class="list-group-item">@Html.RadioButton("Middle_Eastern_Languages_Literatures", true)Middle Eastern Languages&Literatures</div>
+                <div class="list-group-item">@Html.RadioButton("Military_Technologies", true)Military Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Multi_Interdisciplinary_Studies", true)Multi-/Interdisciplinary Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Multimedia_Animation_Special_Effects", true)Multimedia/Animation/Special Effects</div>
+                <div class="list-group-item">@Html.RadioButton("Music_Education", true)Music Education</div>
+                <div class="list-group-item">@Html.RadioButton("Music_General", true)Music,General</div>
+                <div class="list-group-item">@Html.RadioButton("Music_Performance", true)Music,Performance</div>
+                <div class="list-group-item">@Html.RadioButton("Music_Theory_Composition", true)Music Theory&Composition</div>
+                <div class="list-group-item">@Html.RadioButton("Natural_Resources_Conservation_General", true)Natural Resources Conservation,General</div>
+                <div class="list-group-item">@Html.RadioButton("Natural_Resources_Management", true)Natural Resources Management</div>
+                <div class="list-group-item">@Html.RadioButton("North_American_Area_Studies", true)North American Area Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Nuclear_Engineering", true)Nuclear Engineering</div>
+                <div class="list-group-item">@Html.RadioButton("Nuclear_Medicine_Technology", true)Nuclear Medicine Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Nursing_Practical_Vocational_LPN", true)Nursing,Practical/Vocational(LPN)</div>
+                <div class="list-group-item">@Html.RadioButton("Nursing_Registered_BS_RN", true)Nursing,Registered(BS/RN)</div>
+                <div class="list-group-item">@Html.RadioButton("Occupational_Therapy", true)Occupational Therapy</div>
+                <div class="list-group-item">@Html.RadioButton("Occupational_Therapy_Assisting", true)Occupational Therapy Assisting</div>
+                <div class="list-group-item">@Html.RadioButton("Office_Supervision_Management", true)Office Supervision&Management</div>
+                <div class="list-group-item">@Html.RadioButton("Operations_Management_Supervision", true)Operations Management&Supervision</div>
+                <div class="list-group-item">@Html.RadioButton("Optometry_Pre_Optometry", true)Optometry(Pre-Optometry)</div>
+                <div class="list-group-item">@Html.RadioButton("Organizational_Behavior", true)Organizational Behavior</div>
+                <div class="list-group-item">@Html.RadioButton("Osteopathic_Medicine", true)Osteopathic Medicine</div>
+                <div class="list-group-item">@Html.RadioButton("Paralegal_Legal_Assistant", true)Paralegal/Legal Assistant</div>
+                <div class="list-group-item">@Html.RadioButton("Parks_Rec_Leisure_Facilities_Management", true)Parks/Rec/Leisure Facilities Management</div>
+                <div class="list-group-item">@Html.RadioButton("Parks_Recreation_Leisure_General", true)Parks Recreation&Leisure,General</div>
+                <div class="list-group-item">@Html.RadioButton("Personal_Services_General", true)Personal Services,General</div>
+                <div class="list-group-item">@Html.RadioButton("Pharmacy_Pre_Pharmacy", true)Pharmacy(Pre-Pharmacy)</div>
+                <div class="list-group-item">@Html.RadioButton("Philosophy", true)Philosophy</div>
+                <div class="list-group-item">@Html.RadioButton("Photography", true)Photography</div>
+                <div class="list-group-item">@Html.RadioButton("Physical_Education_Coaching", true)Physical Education&Coaching</div>
+                <div class="list-group-item">@Html.RadioButton("Physical_Sciences_General", true)Physical Sciences,General</div>
+                <div class="list-group-item">@Html.RadioButton("Physical_Therapy_Assisting", true)Physical Therapy Assisting</div>
+                <div class="list-group-item">@Html.RadioButton("Physical_Therapy_Pre_Physical_Therapy", true)Physical Therapy Pre-Physical Therapy</div>
+                <div class="list-group-item">@Html.RadioButton("Physician_Assisting", true)Physician Assisting</div>
+                <div class="list-group-item">@Html.RadioButton("Physics", true)Physics</div>
+                <div class="list-group-item">@Html.RadioButton("Political_Science_Government", true)Political Science&Government</div>
+                <div class="list-group-item">@Html.RadioButton("Postsecondary_Education", true)Postsecondary Education</div>
+                <div class="list-group-item">@Html.RadioButton("Precision_Production_Trades_General", true)Precision Production Trades,General</div>
+                <div class="list-group-item">@Html.RadioButton("Protective_Services_General", true)Protective Services,General</div>
+                <div class="list-group-item">@Html.RadioButton("Psychiatric_Mental_Health_Technician", true)Psychiatric/Mental Health Technician</div>
+                <div class="list-group-item">@Html.RadioButton("Psychology_Clinical_Counseling", true)Psychology,Clinical&Counseling</div>
+                <div class="list-group-item">@Html.RadioButton("Psychology_General", true)Psychology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Administration", true)Public Administration</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Administration_Services_General", true)Public Administration&Services,General</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Affairs_Public_Policy_Analysis", true)Public Affairs&Public Policy Analysis</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Health", true)Public Health</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Relations_Organizational_Communication", true)Public Relations&Organizational Communication</div>
+                <div class="list-group-item">@Html.RadioButton("Public_Speaking", true)Public Speaking</div>
+                <div class="list-group-item">@Html.RadioButton("Purchasing_Procurement_Contracts_Management", true)Purchasing/Procurement/Contracts Management</div>
+                <div class="list-group-item">@Html.RadioButton("Quality_Control_Safety_Technologies", true)Quality Control&Safety Technologies</div>
+                <div class="list-group-item">@Html.RadioButton("Radio_Television_Broadcasting", true)Radio&Television Broadcasting</div>
+                <div class="list-group-item">@Html.RadioButton("Radio_Television_Broadcasting_Technology", true)Radio&Television Broadcasting Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Real_Estate", true)Real Estate</div>
+                <div class="list-group-item">@Html.RadioButton("Rehabilitation_Therapy", true)Rehabilitation Therapy</div>
+                <div class="list-group-item">@Html.RadioButton("Religion", true)Religion</div>
+                <div class="list-group-item">@Html.RadioButton("Religious_Education", true)Religious Education</div>
+                <div class="list-group-item">@Html.RadioButton("Respiratory_Therapy_Technology", true)Respiratory Therapy Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Restaurant_Food_Services_Management", true)Restaurant/Food Services Management</div>
+                <div class="list-group-item">@Html.RadioButton("Sales_Merchandising_Marketing_General", true)Sales,Merchandising&Marketing,General</div>
+                <div class="list-group-item">@Html.RadioButton("Science_Education", true)Science Education</div>
+                <div class="list-group-item">@Html.RadioButton("Secondary_Education", true)Secondary_Education</div>
+                <div class="list-group-item">@Html.RadioButton("Secretarial_Studies_Office_Administration", true)Secretarial Studies&Office Administration</div>
+                <div class="list-group-item">@Html.RadioButton("Small_Business_Management_Operations", true)Small Business Management/Operations</div>
+                <div class="list-group-item">@Html.RadioButton("Social_Sciences_General", true)Social Sciences,General</div>
+                <div class="list-group-item">@Html.RadioButton("Social_Studies_Sciences_Education", true)Social Studies/Sciences Education</div>
+                <div class="list-group-item">@Html.RadioButton("Social_Work", true)Social Work</div>
+                <div class="list-group-item">@Html.RadioButton("Sociology", true)Sociology</div>
+                <div class="list-group-item">@Html.RadioButton("Spanish_Language_Literature", true)Spanish Language&Literature</div>
+                <div class="list-group-item">@Html.RadioButton("Special_Education", true)Special Education</div>
+                <div class="list-group-item">@Html.RadioButton("Sport_Fitness_Administration_Management", true)Sport&Fitness Administration/Management</div>
+                <div class="list-group-item">@Html.RadioButton("Statistics", true)Statistics</div>
+                <div class="list-group-item">@Html.RadioButton("Surgical_Technology", true)Surgical Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Surveying_Technology", true)Surveying Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Teacher_Assisting_Aide_Education", true)Teacher Assisting/Aide Education</div>
+                <div class="list-group-item">@Html.RadioButton("Teacher_Education_General", true)Teacher Education,General</div>
+                <div class="list-group-item">@Html.RadioButton("Teacher_Education_Subject_Specific", true)Teacher Education,Subject-Specific</div>
+                <div class="list-group-item">@Html.RadioButton("Textile_Apparel", true)Textile&Apparel</div>
+                <div class="list-group-item">@Html.RadioButton("Theatre_Arts_Drama", true)Theatre Arts/Drama</div>
+                <div class="list-group-item">@Html.RadioButton("Theology_General", true)Theology,General</div>
+                <div class="list-group-item">@Html.RadioButton("Therapy_Rehabilitation_General", true)Therapy&Rehabilitation,General</div>
+                <div class="list-group-item">@Html.RadioButton("Tourism_Travel_Marketing", true)Tourism&Travel Marketing</div>
+                <div class="list-group-item">@Html.RadioButton("Transportation_Materials_Moving_e_g_air_ground_marine", true)Transportation/Materials Moving(e.g.air,ground,marine)</div>
+                <div class="list-group-item">@Html.RadioButton("Travel_Tourism_Management", true)Travel/Tourism Management</div>
+                <div class="list-group-item">@Html.RadioButton("Urban_Studies_Urban_Affairs", true)Urban Studies/Urban Affairs</div>
+                <div class="list-group-item">@Html.RadioButton("Veterinarian_Assisting_Technology", true)Veterinarian Assisting/Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Veterinary_Medicine_Pre_Veterinarian", true)Veterinary Medicine(Pre-Veterinarian)</div>
+                <div class="list-group-item">@Html.RadioButton("Vocational_Rehabilitation_Counseling", true)Vocational Rehabilitation Counseling</div>
+                <div class="list-group-item">@Html.RadioButton("Webpage_Design", true)Webpage Design</div>
+                <div class="list-group-item">@Html.RadioButton("Welding_Technology", true)Welding Technology</div>
+                <div class="list-group-item">@Html.RadioButton("Wildlife_Wildlands_Management", true)Wildlife&Wildlands Management</div>
+                <div class="list-group-item">@Html.RadioButton("Women_s_Studies", true)Women's Studies</div>
+                <div class="list-group-item">@Html.RadioButton("Zoology", true)Zoology</div>
+            </div>
+            <div style="margin-left: 160%; text-align: center;">
+                <input type="submit" value="Show Results" style="background:none; border-width:0px; color:black; font-size:25px;" />
+            </div>
+        </div>
+        <div class="content-side col-md-8 col-sm-12 col-xs-12">
+            <table id="after">
+                @foreach (var item in Model)
+                {
+                    <a href="Details/@Html.DisplayFor(modelItem=>item.ID)" text-align="center" class="col-md-6 col-sm-6 col-xs-12">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </a>
+                }
+            </table>
+        </div>
+    }
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

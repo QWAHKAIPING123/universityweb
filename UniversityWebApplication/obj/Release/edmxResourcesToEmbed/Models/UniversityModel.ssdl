@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UniversityInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="Average Domestic Undergraduate Cost of Tuition per semester" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Average International Undergraduate Cost of Tuition per semester" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Average Domestic Postgraduate(Master)Cost of Tuition per semester" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Average International Postgraduate(Master)Cost of Tuition per semester" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Average Cost of Living" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="Campus Setting" Type="varchar" MaxLength="45" />
+    <Property Name="QS General Ranking" Type="int" />
+    <Property Name="Qualification Requirements" Type="varchar(max)" />
+    <Property Name="Accounting" Type="bit" />
+    <Property Name="Accounting Technician" Type="bit" />
+    <Property Name="Actuarial Science" Type="bit" />
+    <Property Name="Adult Development&amp;Aging/Gerontology" Type="bit" />
+    <Property Name="Advertising" Type="bit" />
+    <Property Name="Aeronautical&amp;Astronautical Engineering Technologies" Type="bit" />
+    <Property Name="Aeronautical&amp;Astronautical Engineering" Type="bit" />
+    <Property Name="African American Studies" Type="bit" />
+    <Property Name="Agribusiness Operations" Type="bit" />
+    <Property Name="Agricultural Business&amp;Management" Type="bit" />
+    <Property Name="Agricultural Economics" Type="bit" />
+    <Property Name="Agricultural Education" Type="bit" />
+    <Property Name="Agricultural Mechanization" Type="bit" />
+    <Property Name="Agricultural Production" Type="bit" />
+    <Property Name="Agricultural/Bioengineering" Type="bit" />
+    <Property Name="Agriculture,General" Type="bit" />
+    <Property Name="Agronomy&amp;Crop Science" Type="bit" />
+    <Property Name="Aircraft Mechanics/Technology" Type="bit" />
+    <Property Name="Aircraft Piloting&amp;Navigation" Type="bit" />
+    <Property Name="Alcohol/Drug Abuse Counseling" Type="bit" />
+    <Property Name="American Indian/Native American Studies" Type="bit" />
+    <Property Name="American/English Literature" Type="bit" />
+    <Property Name="Animal Sciences" Type="bit" />
+    <Property Name="Anthropology" Type="bit" />
+    <Property Name="Applied Mathematics" Type="bit" />
+    <Property Name="Architectural Drafting/CAD Technology" Type="bit" />
+    <Property Name="Architectural Engineering" Type="bit" />
+    <Property Name="Architectural Engineering Technology" Type="bit" />
+    <Property Name="Architectural Environmental Design" Type="bit" />
+    <Property Name="Architecture,General" Type="bit" />
+    <Property Name="Area Studies,General e.g African,Middle Eastern" Type="bit" />
+    <Property Name="Art Education" Type="bit" />
+    <Property Name="Art History,Criticism&amp;Conservation" Type="bit" />
+    <Property Name="Art,General" Type="bit" />
+    <Property Name="Asian Area Studies" Type="bit" />
+    <Property Name="Asian Languages&amp;Literatures" Type="bit" />
+    <Property Name="Astronomy" Type="bit" />
+    <Property Name="Athletic Training" Type="bit" />
+    <Property Name="Atmospheric Sciences&amp;Meteorology" Type="bit" />
+    <Property Name="Autobody Repair/Technology" Type="bit" />
+    <Property Name="Automotive Engineering Technology" Type="bit" />
+    <Property Name="Automotive Mechanics/Technology" Type="bit" />
+    <Property Name="Aviation&amp;Airway Science,General" Type="bit" />
+    <Property Name="Aviation Management&amp;Operations" Type="bit" />
+    <Property Name="Avionics Technology" Type="bit" />
+    <Property Name="Banking&amp;Financial Support Services" Type="bit" />
+    <Property Name="Bible/Biblical Studies" Type="bit" />
+    <Property Name="Biochemistry&amp;Biophysics" Type="bit" />
+    <Property Name="Biology,General" Type="bit" />
+    <Property Name="Biomedical Engineering" Type="bit" />
+    <Property Name="Business Administration&amp;Management,General" Type="bit" />
+    <Property Name="Business Education" Type="bit" />
+    <Property Name="Business/Management Quantitative Methods,General" Type="bit" />
+    <Property Name="Business/Managerial Economics" Type="bit" />
+    <Property Name="Career&amp;Technical Education" Type="bit" />
+    <Property Name="Cell/Cellular Biology" Type="bit" />
+    <Property Name="Chemical Engineering" Type="bit" />
+    <Property Name="Chemistry" Type="bit" />
+    <Property Name="Child Care Services Management" Type="bit" />
+    <Property Name="Child Development" Type="bit" />
+    <Property Name="Chiropractic Pre-Chiropractic" Type="bit" />
+    <Property Name="Cinema/Film" Type="bit" />
+    <Property Name="Cinematography/Film/Video Production" Type="bit" />
+    <Property Name="City/Urban/Regional Planning" Type="bit" />
+    <Property Name="Civil Engineering" Type="bit" />
+    <Property Name="Civil Engineering Technology" Type="bit" />
+    <Property Name="Classical/Ancient Languages&amp;Literatures" Type="bit" />
+    <Property Name="Communication Disorder Services e.g Speech Pathology" Type="bit" />
+    <Property Name="Communications Technology,General" Type="bit" />
+    <Property Name="Communications,General" Type="bit" />
+    <Property Name="Community Organization&amp;Advocacy" Type="bit" />
+    <Property Name="Comparative Literature" Type="bit" />
+    <Property Name="Computer&amp;Information Sciences,General" Type="bit" />
+    <Property Name="Computer Engineering" Type="bit" />
+    <Property Name="Computer Engineering Technology" Type="bit" />
+    <Property Name="Computer Networking/Telecommunications" Type="bit" />
+    <Property Name="Computer Science&amp;Programming" Type="bit" />
+    <Property Name="Computer Software&amp;Media Applications" Type="bit" />
+    <Property Name="Computer System Administration" Type="bit" />
+    <Property Name="Construction Engineering/Management" Type="bit" />
+    <Property Name="Construction Trades e.g carpentry,plumbing,electrical" Type="bit" />
+    <Property Name="Construction/Building Technology" Type="bit" />
+    <Property Name="Consumer&amp;Family Economics" Type="bit" />
+    <Property Name="Corrections" Type="bit" />
+    <Property Name="Cosmetology/Hairstyling" Type="bit" />
+    <Property Name="Counseling&amp;Student Services" Type="bit" />
+    <Property Name="Court Reporting" Type="bit" />
+    <Property Name="Creative Writing" Type="bit" />
+    <Property Name="Criminal Justice" Type="bit" />
+    <Property Name="Criminology" Type="bit" />
+    <Property Name="Culinary Arts/Chef Training" Type="bit" />
+    <Property Name="Curriculum&amp;Instruction" Type="bit" />
+    <Property Name="Dance" Type="bit" />
+    <Property Name="Data Management Technology" Type="bit" />
+    <Property Name="Dental Assisting" Type="bit" />
+    <Property Name="Dental Hygiene" Type="bit" />
+    <Property Name="Dentistry Pre-Dentistry" Type="bit" />
+    <Property Name="Design&amp;Visual Communications,General" Type="bit" />
+    <Property Name="Diesel Mechanics/Technology" Type="bit" />
+    <Property Name="Digital Communications/Media" Type="bit" />
+    <Property Name="Divinity/Ministry" Type="bit" />
+    <Property Name="Drafting/CAD Technology,General" Type="bit" />
+    <Property Name="Early Childhood Education" Type="bit" />
+    <Property Name="Ecology" Type="bit" />
+    <Property Name="Economics" Type="bit" />
+    <Property Name="Educational Administration" Type="bit" />
+    <Property Name="Electrical,Electronics&amp;Communications Engineering" Type="bit" />
+    <Property Name="Electrical,Electronics Engineering Technologies" Type="bit" />
+    <Property Name="Electrical&amp;Electronics Equip Installation&amp;Repair" Type="bit" />
+    <Property Name="Electromechanical&amp;Biomedical Engineering Technologies" Type="bit" />
+    <Property Name="Elementary Education" Type="bit" />
+    <Property Name="Emergency Medical Technology" Type="bit" />
+    <Property Name="Engineering Pre-Engineering,General" Type="bit" />
+    <Property Name="Engineering Technology,General" Type="bit" />
+    <Property Name="English Language&amp;Literature,General" Type="bit" />
+    <Property Name="English/Language Arts Education" Type="bit" />
+    <Property Name="English-as-a-Second-Language Education" Type="bit" />
+    <Property Name="Environmental Control Technologies" Type="bit" />
+    <Property Name="Environmental Health Engineering" Type="bit" />
+    <Property Name="Environmental Science" Type="bit" />
+    <Property Name="Ethnic&amp;Minority Studies,General" Type="bit" />
+    <Property Name="European Area Studies" Type="bit" />
+    <Property Name="Exercise Science/Physiology/Kinesiology" Type="bit" />
+    <Property Name="Family&amp;Consumer Sciences,General" Type="bit" />
+    <Property Name="Fashion Merchandising" Type="bit" />
+    <Property Name="Fashion/Apparel Design" Type="bit" />
+    <Property Name="Finance,General" Type="bit" />
+    <Property Name="Financial Planning&amp;Services" Type="bit" />
+    <Property Name="Fine/Studio Arts" Type="bit" />
+    <Property Name="Fire Protection&amp;Safety Technology" Type="bit" />
+    <Property Name="Food&amp;Nutrition" Type="bit" />
+    <Property Name="Food Sciences&amp;Technology" Type="bit" />
+    <Property Name="Foreign Languages/Education" Type="bit" />
+    <Property Name="Foreign Languages/Literatures,General" Type="bit" />
+    <Property Name="Forestry" Type="bit" />
+    <Property Name="French Language&amp;Literature" Type="bit" />
+    <Property Name="Funeral Services&amp;Mortuary Science" Type="bit" />
+    <Property Name="Genetics" Type="bit" />
+    <Property Name="Geography" Type="bit" />
+    <Property Name="Geological&amp;Earth Sciences" Type="bit" />
+    <Property Name="German Language&amp;Literature" Type="bit" />
+    <Property Name="Graphic&amp;Printing Equipment Operation" Type="bit" />
+    <Property Name="Graphic Design" Type="bit" />
+    <Property Name="Health&amp;Physical Education/Fitness" Type="bit" />
+    <Property Name="Health Education" Type="bit" />
+    <Property Name="Health Services Administration,General" Type="bit" />
+    <Property Name="Health/Medical Technology,General" Type="bit" />
+    <Property Name="Health-Related Professions&amp;Services,General" Type="bit" />
+    <Property Name="Heating/Air-Cond/Refrig Install/Repair" Type="bit" />
+    <Property Name="History" Type="bit" />
+    <Property Name="Horticulture Operations&amp;Management" Type="bit" />
+    <Property Name="Horticulture Science" Type="bit" />
+    <Property Name="Hospital/Facilities Administration" Type="bit" />
+    <Property Name="Hotel/Motel Management" Type="bit" />
+    <Property Name="Human Resources Development/Training" Type="bit" />
+    <Property Name="Human Resources Management" Type="bit" />
+    <Property Name="Industrial Design" Type="bit" />
+    <Property Name="Industrial Engineering" Type="bit" />
+    <Property Name="Industrial Production Technologies" Type="bit" />
+    <Property Name="Information Science" Type="bit" />
+    <Property Name="Insurance&amp;Risk Management" Type="bit" />
+    <Property Name="Interior Architecture" Type="bit" />
+    <Property Name="Interior Design" Type="bit" />
+    <Property Name="International Business Management" Type="bit" />
+    <Property Name="International Relations&amp;Affairs" Type="bit" />
+    <Property Name="Investments&amp;Securities" Type="bit" />
+    <Property Name="Journalism Broadcast" Type="bit" />
+    <Property Name="Journalism Print" Type="bit" />
+    <Property Name="Junior High/Middle School Education" Type="bit" />
+    <Property Name="Labor/Industrial Relations" Type="bit" />
+    <Property Name="Landscape Architecture" Type="bit" />
+    <Property Name="Latin American Area Studies" Type="bit" />
+    <Property Name="Latino/Chicano Studies" Type="bit" />
+    <Property Name="Law Pre-Law" Type="bit" />
+    <Property Name="Law Enforcement" Type="bit" />
+    <Property Name="Legal Administrative Assisting/Secretarial" Type="bit" />
+    <Property Name="Legal Studies,General" Type="bit" />
+    <Property Name="Liberal Arts&amp;General Studies" Type="bit" />
+    <Property Name="Library Science" Type="bit" />
+    <Property Name="Linguistics" Type="bit" />
+    <Property Name="Logistics&amp;Materials Management" Type="bit" />
+    <Property Name="Machine Tool Technology" Type="bit" />
+    <Property Name="Management Information Systems" Type="bit" />
+    <Property Name="Marine/Aquatic Biology" Type="bit" />
+    <Property Name="Marketing Management&amp;Research" Type="bit" />
+    <Property Name="Mass Communications" Type="bit" />
+    <Property Name="Massage Therapy" Type="bit" />
+    <Property Name="Mathematics Education" Type="bit" />
+    <Property Name="Mathematics,General" Type="bit" />
+    <Property Name="Mechanical Drafting/CAD Technology" Type="bit" />
+    <Property Name="Mechanical Engineering" Type="bit" />
+    <Property Name="Mechanical Engineering Technology" Type="bit" />
+    <Property Name="Mechanics&amp;Repairers,General" Type="bit" />
+    <Property Name="Medical Assisting" Type="bit" />
+    <Property Name="Medical Laboratory Technology" Type="bit" />
+    <Property Name="Medical Office/Secretarial" Type="bit" />
+    <Property Name="Medical Radiologic Technology" Type="bit" />
+    <Property Name="Medical Records" Type="bit" />
+    <Property Name="Medical/Clinical Assisting,General" Type="bit" />
+    <Property Name="Medicine Pre-Medicine" Type="bit" />
+    <Property Name="Mental Health Counseling" Type="bit" />
+    <Property Name="Microbiology&amp;Immunology" Type="bit" />
+    <Property Name="Middle Eastern Languages&amp;Literatures" Type="bit" />
+    <Property Name="Military Technologies" Type="bit" />
+    <Property Name="Multi/Interdisciplinary Studies" Type="bit" />
+    <Property Name="Multimedia/Animation/Special Effects" Type="bit" />
+    <Property Name="Music Education" Type="bit" />
+    <Property Name="Music,General" Type="bit" />
+    <Property Name="Music,Performance" Type="bit" />
+    <Property Name="Music,Theory&amp;Composition" Type="bit" />
+    <Property Name="Natural Resources Conservation,General" Type="bit" />
+    <Property Name="Natural Resources Management" Type="bit" />
+    <Property Name="North American Area Studies" Type="bit" />
+    <Property Name="Nuclear Engineering" Type="bit" />
+    <Property Name="Nuclear Medicine Technology" Type="bit" />
+    <Property Name="Nursing,Practical/Vocational LPN" Type="bit" />
+    <Property Name="Nursing,Registered BS/RN" Type="bit" />
+    <Property Name="Occupational Therapy" Type="bit" />
+    <Property Name="Occupational Therapy Assisting" Type="bit" />
+    <Property Name="Office Supervision&amp;Management" Type="bit" />
+    <Property Name="Operations Management&amp;Supervision" Type="bit" />
+    <Property Name="Optometry Pre-Optometry" Type="bit" />
+    <Property Name="Organizational Behavior" Type="bit" />
+    <Property Name="Osteopathic Medicine" Type="bit" />
+    <Property Name="Paralegal/Legal Assistant" Type="bit" />
+    <Property Name="Parks Recreation&amp;Leisure,General" Type="bit" />
+    <Property Name="Parks/Rec/Leisure Facilities Management" Type="bit" />
+    <Property Name="Personal Services,General" Type="bit" />
+    <Property Name="Pharmacy Pre-Pharmacy" Type="bit" />
+    <Property Name="Philosophy" Type="bit" />
+    <Property Name="Photography" Type="bit" />
+    <Property Name="Physical Education&amp;Coaching" Type="bit" />
+    <Property Name="Physical Sciences,General" Type="bit" />
+    <Property Name="Physical Therapy Pre-Physical Therapy" Type="bit" />
+    <Property Name="Physical Therapy Assisting" Type="bit" />
+    <Property Name="Physician Assisting" Type="bit" />
+    <Property Name="Physics" Type="bit" />
+    <Property Name="Political Science&amp;Government" Type="bit" />
+    <Property Name="Postsecondary Education" Type="bit" />
+    <Property Name="Precision Production Trades,General" Type="bit" />
+    <Property Name="Protective Services,General" Type="bit" />
+    <Property Name="Psychiatric/Mental Health Technician" Type="bit" />
+    <Property Name="Psychology,Clinical&amp;Counseling" Type="bit" />
+    <Property Name="Psychology,General" Type="bit" />
+    <Property Name="Public Administration" Type="bit" />
+    <Property Name="Public Administration&amp;Services,General" Type="bit" />
+    <Property Name="Public Affairs&amp;Public Policy Analysis" Type="bit" />
+    <Property Name="Public Health" Type="bit" />
+    <Property Name="Public Relations&amp;Organizational Communication" Type="bit" />
+    <Property Name="Public Speaking" Type="bit" />
+    <Property Name="Purchasing/Procurement/Contracts Management" Type="bit" />
+    <Property Name="Quality Control&amp;Safety Technologies" Type="bit" />
+    <Property Name="Radio&amp;Television Broadcasting" Type="bit" />
+    <Property Name="Radio&amp;Television Broadcasting Technology" Type="bit" />
+    <Property Name="Real Estate" Type="bit" />
+    <Property Name="Rehabilitation Therapy" Type="bit" />
+    <Property Name="Religion" Type="bit" />
+    <Property Name="Religious Education" Type="bit" />
+    <Property Name="Respiratory Therapy Technology" Type="bit" />
+    <Property Name="Restaurant/Food Services Management" Type="bit" />
+    <Property Name="Sales,Merchandising&amp;Marketing,General" Type="bit" />
+    <Property Name="Science Education" Type="bit" />
+    <Property Name="Secondary Education" Type="bit" />
+    <Property Name="Secretarial Studies&amp;Office Administration" Type="bit" />
+    <Property Name="Small Business Management/Operations" Type="bit" />
+    <Property Name="Social Sciences,General" Type="bit" />
+    <Property Name="Social Studies/Sciences Education" Type="bit" />
+    <Property Name="Social Work" Type="bit" />
+    <Property Name="Sociology" Type="bit" />
+    <Property Name="Spanish Language&amp;Literature" Type="bit" />
+    <Property Name="Special Education" Type="bit" />
+    <Property Name="Sport&amp;Fitness Administration/Management" Type="bit" />
+    <Property Name="Statistics" Type="bit" />
+    <Property Name="Surgical Technology" Type="bit" />
+    <Property Name="Surveying Technology" Type="bit" />
+    <Property Name="Teacher Assisting/Aide Education" Type="bit" />
+    <Property Name="Teacher Education,General" Type="bit" />
+    <Property Name="Teacher Education,Subject-Specific" Type="bit" />
+    <Property Name="Textile&amp;Apparel" Type="bit" />
+    <Property Name="Theatre Arts/Drama" Type="bit" />
+    <Property Name="Theology,General" Type="bit" />
+    <Property Name="Therapy&amp;Rehabilitation,General" Type="bit" />
+    <Property Name="Tourism&amp;Travel Marketing" Type="bit" />
+    <Property Name="Transportation/Materials Moving e.g air,ground,marine" Type="bit" />
+    <Property Name="Travel/Tourism Management" Type="bit" />
+    <Property Name="Urban Studies/Urban Affairs" Type="bit" />
+    <Property Name="Veterinarian Assisting/Technology" Type="bit" />
+    <Property Name="Veterinary Medicine Pre-Veterinarian" Type="bit" />
+    <Property Name="Vocational Rehabilitation Counseling" Type="bit" />
+    <Property Name="Webpage Design" Type="bit" />
+    <Property Name="Welding Technology" Type="bit" />
+    <Property Name="Wildlife&amp;Wildlands Management" Type="bit" />
+    <Property Name="Women's Studies" Type="bit" />
+    <Property Name="Zoology" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="UniversityModelStoreContainer">
+    <EntitySet Name="UniversityInfo" EntityType="Self.UniversityInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

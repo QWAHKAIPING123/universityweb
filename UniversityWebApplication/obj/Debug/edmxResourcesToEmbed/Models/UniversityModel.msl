@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
+    <EntitySetMapping Name="UniversityInfoes">
+      <EntityTypeMapping TypeName="UniversityModel.UniversityInfo">
+        <MappingFragment StoreEntitySet="UniversityInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Average_Domestic_Undergraduate_Cost_of_Tuition_per_semester" ColumnName="Average Domestic Undergraduate Cost of Tuition per semester" />
+          <ScalarProperty Name="Average_International_Undergraduate_Cost_of_Tuition_per_semester" ColumnName="Average International Undergraduate Cost of Tuition per semester" />
+          <ScalarProperty Name="Average_Domestic_Postgraduate_Master_Cost_of_Tuition_per_semester" ColumnName="Average Domestic Postgraduate(Master)Cost of Tuition per semester" />
+          <ScalarProperty Name="Average_International_Postgraduate_Master_Cost_of_Tuition_per_semester" ColumnName="Average International Postgraduate(Master)Cost of Tuition per semester" />
+          <ScalarProperty Name="Average_Cost_of_Living" ColumnName="Average Cost of Living" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Campus_Setting" ColumnName="Campus Setting" />
+          <ScalarProperty Name="QS_General_Ranking" ColumnName="QS General Ranking" />
+          <ScalarProperty Name="Qualification_Requirements" ColumnName="Qualification Requirements" />
+          <ScalarProperty Name="Accounting" ColumnName="Accounting" />
+          <ScalarProperty Name="Accounting_Technician" ColumnName="Accounting Technician" />
+          <ScalarProperty Name="Actuarial_Science" ColumnName="Actuarial Science" />
+          <ScalarProperty Name="Adult_Development_Aging_Gerontology" ColumnName="Adult Development&amp;Aging/Gerontology" />
+          <ScalarProperty Name="Advertising" ColumnName="Advertising" />
+          <ScalarProperty Name="Aeronautical_Astronautical_Engineering_Technologies" ColumnName="Aeronautical&amp;Astronautical Engineering Technologies" />
+          <ScalarProperty Name="Aeronautical_Astronautical_Engineering" ColumnName="Aeronautical&amp;Astronautical Engineering" />
+          <ScalarProperty Name="African_American_Studies" ColumnName="African American Studies" />
+          <ScalarProperty Name="Agribusiness_Operations" ColumnName="Agribusiness Operations" />
+          <ScalarProperty Name="Agricultural_Business_Management" ColumnName="Agricultural Business&amp;Management" />
+          <ScalarProperty Name="Agricultural_Economics" ColumnName="Agricultural Economics" />
+          <ScalarProperty Name="Agricultural_Education" ColumnName="Agricultural Education" />
+          <ScalarProperty Name="Agricultural_Mechanization" ColumnName="Agricultural Mechanization" />
+          <ScalarProperty Name="Agricultural_Production" ColumnName="Agricultural Production" />
+          <ScalarProperty Name="Agricultural_Bioengineering" ColumnName="Agricultural/Bioengineering" />
+          <ScalarProperty Name="Agriculture_General" ColumnName="Agriculture,General" />
+          <ScalarProperty Name="Agronomy_Crop_Science" ColumnName="Agronomy&amp;Crop Science" />
+          <ScalarProperty Name="Aircraft_Mechanics_Technology" ColumnName="Aircraft Mechanics/Technology" />
+          <ScalarProperty Name="Aircraft_Piloting_Navigation" ColumnName="Aircraft Piloting&amp;Navigation" />
+          <ScalarProperty Name="Alcohol_Drug_Abuse_Counseling" ColumnName="Alcohol/Drug Abuse Counseling" />
+          <ScalarProperty Name="American_Indian_Native_American_Studies" ColumnName="American Indian/Native American Studies" />
+          <ScalarProperty Name="American_English_Literature" ColumnName="American/English Literature" />
+          <ScalarProperty Name="Animal_Sciences" ColumnName="Animal Sciences" />
+          <ScalarProperty Name="Anthropology" ColumnName="Anthropology" />
+          <ScalarProperty Name="Applied_Mathematics" ColumnName="Applied Mathematics" />
+          <ScalarProperty Name="Architectural_Drafting_CAD_Technology" ColumnName="Architectural Drafting/CAD Technology" />
+          <ScalarProperty Name="Architectural_Engineering" ColumnName="Architectural Engineering" />
+          <ScalarProperty Name="Architectural_Engineering_Technology" ColumnName="Architectural Engineering Technology" />
+          <ScalarProperty Name="Architectural_Environmental_Design" ColumnName="Architectural Environmental Design" />
+          <ScalarProperty Name="Architecture_General" ColumnName="Architecture,General" />
+          <ScalarProperty Name="Area_Studies_General_e_g_African_Middle_Eastern" ColumnName="Area Studies,General e.g African,Middle Eastern" />
+          <ScalarProperty Name="Art_Education" ColumnName="Art Education" />
+          <ScalarProperty Name="Art_History_Criticism_Conservation" ColumnName="Art History,Criticism&amp;Conservation" />
+          <ScalarProperty Name="Art_General" ColumnName="Art,General" />
+          <ScalarProperty Name="Asian_Area_Studies" ColumnName="Asian Area Studies" />
+          <ScalarProperty Name="Asian_Languages_Literatures" ColumnName="Asian Languages&amp;Literatures" />
+          <ScalarProperty Name="Astronomy" ColumnName="Astronomy" />
+          <ScalarProperty Name="Athletic_Training" ColumnName="Athletic Training" />
+          <ScalarProperty Name="Atmospheric_Sciences_Meteorology" ColumnName="Atmospheric Sciences&amp;Meteorology" />
+          <ScalarProperty Name="Autobody_Repair_Technology" ColumnName="Autobody Repair/Technology" />
+          <ScalarProperty Name="Automotive_Engineering_Technology" ColumnName="Automotive Engineering Technology" />
+          <ScalarProperty Name="Automotive_Mechanics_Technology" ColumnName="Automotive Mechanics/Technology" />
+          <ScalarProperty Name="Aviation_Airway_Science_General" ColumnName="Aviation&amp;Airway Science,General" />
+          <ScalarProperty Name="Aviation_Management_Operations" ColumnName="Aviation Management&amp;Operations" />
+          <ScalarProperty Name="Avionics_Technology" ColumnName="Avionics Technology" />
+          <ScalarProperty Name="Banking_Financial_Support_Services" ColumnName="Banking&amp;Financial Support Services" />
+          <ScalarProperty Name="Bible_Biblical_Studies" ColumnName="Bible/Biblical Studies" />
+          <ScalarProperty Name="Biochemistry_Biophysics" ColumnName="Biochemistry&amp;Biophysics" />
+          <ScalarProperty Name="Biology_General" ColumnName="Biology,General" />
+          <ScalarProperty Name="Biomedical_Engineering" ColumnName="Biomedical Engineering" />
+          <ScalarProperty Name="Business_Administration_Management_General" ColumnName="Business Administration&amp;Management,General" />
+          <ScalarProperty Name="Business_Education" ColumnName="Business Education" />
+          <ScalarProperty Name="Business_Management_Quantitative_Methods_General" ColumnName="Business/Management Quantitative Methods,General" />
+          <ScalarProperty Name="Business_Managerial_Economics" ColumnName="Business/Managerial Economics" />
+          <ScalarProperty Name="Career_Technical_Education" ColumnName="Career&amp;Technical Education" />
+          <ScalarProperty Name="Cell_Cellular_Biology" ColumnName="Cell/Cellular Biology" />
+          <ScalarProperty Name="Chemical_Engineering" ColumnName="Chemical Engineering" />
+          <ScalarProperty Name="Chemistry" ColumnName="Chemistry" />
+          <ScalarProperty Name="Child_Care_Services_Management" ColumnName="Child Care Services Management" />
+          <ScalarProperty Name="Child_Development" ColumnName="Child Development" />
+          <ScalarProperty Name="Chiropractic_Pre_Chiropractic" ColumnName="Chiropractic Pre-Chiropractic" />
+          <ScalarProperty Name="Cinema_Film" ColumnName="Cinema/Film" />
+          <ScalarProperty Name="Cinematography_Film_Video_Production" ColumnName="Cinematography/Film/Video Production" />
+          <ScalarProperty Name="City_Urban_Regional_Planning" ColumnName="City/Urban/Regional Planning" />
+          <ScalarProperty Name="Civil_Engineering" ColumnName="Civil Engineering" />
+          <ScalarProperty Name="Civil_Engineering_Technology" ColumnName="Civil Engineering Technology" />
+          <ScalarProperty Name="Classical_Ancient_Languages_Literatures" ColumnName="Classical/Ancient Languages&amp;Literatures" />
+          <ScalarProperty Name="Communication_Disorder_Services_e_g_Speech_Pathology" ColumnName="Communication Disorder Services e.g Speech Pathology" />
+          <ScalarProperty Name="Communications_Technology_General" ColumnName="Communications Technology,General" />
+          <ScalarProperty Name="Communications_General" ColumnName="Communications,General" />
+          <ScalarProperty Name="Community_Organization_Advocacy" ColumnName="Community Organization&amp;Advocacy" />
+          <ScalarProperty Name="Comparative_Literature" ColumnName="Comparative Literature" />
+          <ScalarProperty Name="Computer_Information_Sciences_General" ColumnName="Computer&amp;Information Sciences,General" />
+          <ScalarProperty Name="Computer_Engineering" ColumnName="Computer Engineering" />
+          <ScalarProperty Name="Computer_Engineering_Technology" ColumnName="Computer Engineering Technology" />
+          <ScalarProperty Name="Computer_Networking_Telecommunications" ColumnName="Computer Networking/Telecommunications" />
+          <ScalarProperty Name="Computer_Science_Programming" ColumnName="Computer Science&amp;Programming" />
+          <ScalarProperty Name="Computer_Software_Media_Applications" ColumnName="Computer Software&amp;Media Applications" />
+          <ScalarProperty Name="Computer_System_Administration" ColumnName="Computer System Administration" />
+          <ScalarProperty Name="Construction_Engineering_Management" ColumnName="Construction Engineering/Management" />
+          <ScalarProperty Name="Construction_Trades_e_g_carpentry_plumbing_electrical" ColumnName="Construction Trades e.g carpentry,plumbing,electrical" />
+          <ScalarProperty Name="Construction_Building_Technology" ColumnName="Construction/Building Technology" />
+          <ScalarProperty Name="Consumer_Family_Economics" ColumnName="Consumer&amp;Family Economics" />
+          <ScalarProperty Name="Corrections" ColumnName="Corrections" />
+          <ScalarProperty Name="Cosmetology_Hairstyling" ColumnName="Cosmetology/Hairstyling" />
+          <ScalarProperty Name="Counseling_Student_Services" ColumnName="Counseling&amp;Student Services" />
+          <ScalarProperty Name="Court_Reporting" ColumnName="Court Reporting" />
+          <ScalarProperty Name="Creative_Writing" ColumnName="Creative Writing" />
+          <ScalarProperty Name="Criminal_Justice" ColumnName="Criminal Justice" />
+          <ScalarProperty Name="Criminology" ColumnName="Criminology" />
+          <ScalarProperty Name="Culinary_Arts_Chef_Training" ColumnName="Culinary Arts/Chef Training" />
+          <ScalarProperty Name="Curriculum_Instruction" ColumnName="Curriculum&amp;Instruction" />
+          <ScalarProperty Name="Dance" ColumnName="Dance" />
+          <ScalarProperty Name="Data_Management_Technology" ColumnName="Data Management Technology" />
+          <ScalarProperty Name="Dental_Assisting" ColumnName="Dental Assisting" />
+          <ScalarProperty Name="Dental_Hygiene" ColumnName="Dental Hygiene" />
+          <ScalarProperty Name="Dentistry_Pre_Dentistry" ColumnName="Dentistry Pre-Dentistry" />
+          <ScalarProperty Name="Design_Visual_Communications_General" ColumnName="Design&amp;Visual Communications,General" />
+          <ScalarProperty Name="Diesel_Mechanics_Technology" ColumnName="Diesel Mechanics/Technology" />
+          <ScalarProperty Name="Digital_Communications_Media" ColumnName="Digital Communications/Media" />
+          <ScalarProperty Name="Divinity_Ministry" ColumnName="Divinity/Ministry" />
+          <ScalarProperty Name="Drafting_CAD_Technology_General" ColumnName="Drafting/CAD Technology,General" />
+          <ScalarProperty Name="Early_Childhood_Education" ColumnName="Early Childhood Education" />
+          <ScalarProperty Name="Ecology" ColumnName="Ecology" />
+          <ScalarProperty Name="Economics" ColumnName="Economics" />
+          <ScalarProperty Name="Educational_Administration" ColumnName="Educational Administration" />
+          <ScalarProperty Name="Electrical_Electronics_Communications_Engineering" ColumnName="Electrical,Electronics&amp;Communications Engineering" />
+          <ScalarProperty Name="Electrical_Electronics_Engineering_Technologies" ColumnName="Electrical,Electronics Engineering Technologies" />
+          <ScalarProperty Name="Electrical_Electronics_Equip_Installation_Repair" ColumnName="Electrical&amp;Electronics Equip Installation&amp;Repair" />
+          <ScalarProperty Name="Electromechanical_Biomedical_Engineering_Technologies" ColumnName="Electromechanical&amp;Biomedical Engineering Technologies" />
+          <ScalarProperty Name="Elementary_Education" ColumnName="Elementary Education" />
+          <ScalarProperty Name="Emergency_Medical_Technology" ColumnName="Emergency Medical Technology" />
+          <ScalarProperty Name="Engineering_Pre_Engineering_General" ColumnName="Engineering Pre-Engineering,General" />
+          <ScalarProperty Name="Engineering_Technology_General" ColumnName="Engineering Technology,General" />
+          <ScalarProperty Name="English_Language_Literature_General" ColumnName="English Language&amp;Literature,General" />
+          <ScalarProperty Name="English_Language_Arts_Education" ColumnName="English/Language Arts Education" />
+          <ScalarProperty Name="English_as_a_Second_Language_Education" ColumnName="English-as-a-Second-Language Education" />
+          <ScalarProperty Name="Environmental_Control_Technologies" ColumnName="Environmental Control Technologies" />
+          <ScalarProperty Name="Environmental_Health_Engineering" ColumnName="Environmental Health Engineering" />
+          <ScalarProperty Name="Environmental_Science" ColumnName="Environmental Science" />
+          <ScalarProperty Name="Ethnic_Minority_Studies_General" ColumnName="Ethnic&amp;Minority Studies,General" />
+          <ScalarProperty Name="European_Area_Studies" ColumnName="European Area Studies" />
+          <ScalarProperty Name="Exercise_Science_Physiology_Kinesiology" ColumnName="Exercise Science/Physiology/Kinesiology" />
+          <ScalarProperty Name="Family_Consumer_Sciences_General" ColumnName="Family&amp;Consumer Sciences,General" />
+          <ScalarProperty Name="Fashion_Merchandising" ColumnName="Fashion Merchandising" />
+          <ScalarProperty Name="Fashion_Apparel_Design" ColumnName="Fashion/Apparel Design" />
+          <ScalarProperty Name="Finance_General" ColumnName="Finance,General" />
+          <ScalarProperty Name="Financial_Planning_Services" ColumnName="Financial Planning&amp;Services" />
+          <ScalarProperty Name="Fine_Studio_Arts" ColumnName="Fine/Studio Arts" />
+          <ScalarProperty Name="Fire_Protection_Safety_Technology" ColumnName="Fire Protection&amp;Safety Technology" />
+          <ScalarProperty Name="Food_Nutrition" ColumnName="Food&amp;Nutrition" />
+          <ScalarProperty Name="Food_Sciences_Technology" ColumnName="Food Sciences&amp;Technology" />
+          <ScalarProperty Name="Foreign_Languages_Education" ColumnName="Foreign Languages/Education" />
+          <ScalarProperty Name="Foreign_Languages_Literatures_General" ColumnName="Foreign Languages/Literatures,General" />
+          <ScalarProperty Name="Forestry" ColumnName="Forestry" />
+          <ScalarProperty Name="French_Language_Literature" ColumnName="French Language&amp;Literature" />
+          <ScalarProperty Name="Funeral_Services_Mortuary_Science" ColumnName="Funeral Services&amp;Mortuary Science" />
+          <ScalarProperty Name="Genetics" ColumnName="Genetics" />
+          <ScalarProperty Name="Geography" ColumnName="Geography" />
+          <ScalarProperty Name="Geological_Earth_Sciences" ColumnName="Geological&amp;Earth Sciences" />
+          <ScalarProperty Name="German_Language_Literature" ColumnName="German Language&amp;Literature" />
+          <ScalarProperty Name="Graphic_Printing_Equipment_Operation" ColumnName="Graphic&amp;Printing Equipment Operation" />
+          <ScalarProperty Name="Graphic_Design" ColumnName="Graphic Design" />
+          <ScalarProperty Name="Health_Physical_Education_Fitness" ColumnName="Health&amp;Physical Education/Fitness" />
+          <ScalarProperty Name="Health_Education" ColumnName="Health Education" />
+          <ScalarProperty Name="Health_Services_Administration_General" ColumnName="Health Services Administration,General" />
+          <ScalarProperty Name="Health_Medical_Technology_General" ColumnName="Health/Medical Technology,General" />
+          <ScalarProperty Name="Health_Related_Professions_Services_General" ColumnName="Health-Related Professions&amp;Services,General" />
+          <ScalarProperty Name="Heating_Air_Cond_Refrig_Install_Repair" ColumnName="Heating/Air-Cond/Refrig Install/Repair" />
+          <ScalarProperty Name="History" ColumnName="History" />
+          <ScalarProperty Name="Horticulture_Operations_Management" ColumnName="Horticulture Operations&amp;Management" />
+          <ScalarProperty Name="Horticulture_Science" ColumnName="Horticulture Science" />
+          <ScalarProperty Name="Hospital_Facilities_Administration" ColumnName="Hospital/Facilities Administration" />
+          <ScalarProperty Name="Hotel_Motel_Management" ColumnName="Hotel/Motel Management" />
+          <ScalarProperty Name="Human_Resources_Development_Training" ColumnName="Human Resources Development/Training" />
+          <ScalarProperty Name="Human_Resources_Management" ColumnName="Human Resources Management" />
+          <ScalarProperty Name="Industrial_Design" ColumnName="Industrial Design" />
+          <ScalarProperty Name="Industrial_Engineering" ColumnName="Industrial Engineering" />
+          <ScalarProperty Name="Industrial_Production_Technologies" ColumnName="Industrial Production Technologies" />
+          <ScalarProperty Name="Information_Science" ColumnName="Information Science" />
+          <ScalarProperty Name="Insurance_Risk_Management" ColumnName="Insurance&amp;Risk Management" />
+          <ScalarProperty Name="Interior_Architecture" ColumnName="Interior Architecture" />
+          <ScalarProperty Name="Interior_Design" ColumnName="Interior Design" />
+          <ScalarProperty Name="International_Business_Management" ColumnName="International Business Management" />
+          <ScalarProperty Name="International_Relations_Affairs" ColumnName="International Relations&amp;Affairs" />
+          <ScalarProperty Name="Investments_Securities" ColumnName="Investments&amp;Securities" />
+          <ScalarProperty Name="Journalism_Broadcast" ColumnName="Journalism Broadcast" />
+          <ScalarProperty Name="Journalism_Print" ColumnName="Journalism Print" />
+          <ScalarProperty Name="Junior_High_Middle_School_Education" ColumnName="Junior High/Middle School Education" />
+          <ScalarProperty Name="Labor_Industrial_Relations" ColumnName="Labor/Industrial Relations" />
+          <ScalarProperty Name="Landscape_Architecture" ColumnName="Landscape Architecture" />
+          <ScalarProperty Name="Latin_American_Area_Studies" ColumnName="Latin American Area Studies" />
+          <ScalarProperty Name="Latino_Chicano_Studies" ColumnName="Latino/Chicano Studies" />
+          <ScalarProperty Name="Law_Pre_Law" ColumnName="Law Pre-Law" />
+          <ScalarProperty Name="Law_Enforcement" ColumnName="Law Enforcement" />
+          <ScalarProperty Name="Legal_Administrative_Assisting_Secretarial" ColumnName="Legal Administrative Assisting/Secretarial" />
+          <ScalarProperty Name="Legal_Studies_General" ColumnName="Legal Studies,General" />
+          <ScalarProperty Name="Liberal_Arts_General_Studies" ColumnName="Liberal Arts&amp;General Studies" />
+          <ScalarProperty Name="Library_Science" ColumnName="Library Science" />
+          <ScalarProperty Name="Linguistics" ColumnName="Linguistics" />
+          <ScalarProperty Name="Logistics_Materials_Management" ColumnName="Logistics&amp;Materials Management" />
+          <ScalarProperty Name="Machine_Tool_Technology" ColumnName="Machine Tool Technology" />
+          <ScalarProperty Name="Management_Information_Systems" ColumnName="Management Information Systems" />
+          <ScalarProperty Name="Marine_Aquatic_Biology" ColumnName="Marine/Aquatic Biology" />
+          <ScalarProperty Name="Marketing_Management_Research" ColumnName="Marketing Management&amp;Research" />
+          <ScalarProperty Name="Mass_Communications" ColumnName="Mass Communications" />
+          <ScalarProperty Name="Massage_Therapy" ColumnName="Massage Therapy" />
+          <ScalarProperty Name="Mathematics_Education" ColumnName="Mathematics Education" />
+          <ScalarProperty Name="Mathematics_General" ColumnName="Mathematics,General" />
+          <ScalarProperty Name="Mechanical_Drafting_CAD_Technology" ColumnName="Mechanical Drafting/CAD Technology" />
+          <ScalarProperty Name="Mechanical_Engineering" ColumnName="Mechanical Engineering" />
+          <ScalarProperty Name="Mechanical_Engineering_Technology" ColumnName="Mechanical Engineering Technology" />
+          <ScalarProperty Name="Mechanics_Repairers_General" ColumnName="Mechanics&amp;Repairers,General" />
+          <ScalarProperty Name="Medical_Assisting" ColumnName="Medical Assisting" />
+          <ScalarProperty Name="Medical_Laboratory_Technology" ColumnName="Medical Laboratory Technology" />
+          <ScalarProperty Name="Medical_Office_Secretarial" ColumnName="Medical Office/Secretarial" />
+          <ScalarProperty Name="Medical_Radiologic_Technology" ColumnName="Medical Radiologic Technology" />
+          <ScalarProperty Name="Medical_Records" ColumnName="Medical Records" />
+          <ScalarProperty Name="Medical_Clinical_Assisting_General" ColumnName="Medical/Clinical Assisting,General" />
+          <ScalarProperty Name="Medicine_Pre_Medicine" ColumnName="Medicine Pre-Medicine" />
+          <ScalarProperty Name="Mental_Health_Counseling" ColumnName="Mental Health Counseling" />
+          <ScalarProperty Name="Microbiology_Immunology" ColumnName="Microbiology&amp;Immunology" />
+          <ScalarProperty Name="Middle_Eastern_Languages_Literatures" ColumnName="Middle Eastern Languages&amp;Literatures" />
+          <ScalarProperty Name="Military_Technologies" ColumnName="Military Technologies" />
+          <ScalarProperty Name="Multi_Interdisciplinary_Studies" ColumnName="Multi/Interdisciplinary Studies" />
+          <ScalarProperty Name="Multimedia_Animation_Special_Effects" ColumnName="Multimedia/Animation/Special Effects" />
+          <ScalarProperty Name="Music_Education" ColumnName="Music Education" />
+          <ScalarProperty Name="Music_General" ColumnName="Music,General" />
+          <ScalarProperty Name="Music_Performance" ColumnName="Music,Performance" />
+          <ScalarProperty Name="Music_Theory_Composition" ColumnName="Music,Theory&amp;Composition" />
+          <ScalarProperty Name="Natural_Resources_Conservation_General" ColumnName="Natural Resources Conservation,General" />
+          <ScalarProperty Name="Natural_Resources_Management" ColumnName="Natural Resources Management" />
+          <ScalarProperty Name="North_American_Area_Studies" ColumnName="North American Area Studies" />
+          <ScalarProperty Name="Nuclear_Engineering" ColumnName="Nuclear Engineering" />
+          <ScalarProperty Name="Nuclear_Medicine_Technology" ColumnName="Nuclear Medicine Technology" />
+          <ScalarProperty Name="Nursing_Practical_Vocational_LPN" ColumnName="Nursing,Practical/Vocational LPN" />
+          <ScalarProperty Name="Nursing_Registered_BS_RN" ColumnName="Nursing,Registered BS/RN" />
+          <ScalarProperty Name="Occupational_Therapy" ColumnName="Occupational Therapy" />
+          <ScalarProperty Name="Occupational_Therapy_Assisting" ColumnName="Occupational Therapy Assisting" />
+          <ScalarProperty Name="Office_Supervision_Management" ColumnName="Office Supervision&amp;Management" />
+          <ScalarProperty Name="Operations_Management_Supervision" ColumnName="Operations Management&amp;Supervision" />
+          <ScalarProperty Name="Optometry_Pre_Optometry" ColumnName="Optometry Pre-Optometry" />
+          <ScalarProperty Name="Organizational_Behavior" ColumnName="Organizational Behavior" />
+          <ScalarProperty Name="Osteopathic_Medicine" ColumnName="Osteopathic Medicine" />
+          <ScalarProperty Name="Paralegal_Legal_Assistant" ColumnName="Paralegal/Legal Assistant" />
+          <ScalarProperty Name="Parks_Recreation_Leisure_General" ColumnName="Parks Recreation&amp;Leisure,General" />
+          <ScalarProperty Name="Parks_Rec_Leisure_Facilities_Management" ColumnName="Parks/Rec/Leisure Facilities Management" />
+          <ScalarProperty Name="Personal_Services_General" ColumnName="Personal Services,General" />
+          <ScalarProperty Name="Pharmacy_Pre_Pharmacy" ColumnName="Pharmacy Pre-Pharmacy" />
+          <ScalarProperty Name="Philosophy" ColumnName="Philosophy" />
+          <ScalarProperty Name="Photography" ColumnName="Photography" />
+          <ScalarProperty Name="Physical_Education_Coaching" ColumnName="Physical Education&amp;Coaching" />
+          <ScalarProperty Name="Physical_Sciences_General" ColumnName="Physical Sciences,General" />
+          <ScalarProperty Name="Physical_Therapy_Pre_Physical_Therapy" ColumnName="Physical Therapy Pre-Physical Therapy" />
+          <ScalarProperty Name="Physical_Therapy_Assisting" ColumnName="Physical Therapy Assisting" />
+          <ScalarProperty Name="Physician_Assisting" ColumnName="Physician Assisting" />
+          <ScalarProperty Name="Physics" ColumnName="Physics" />
+          <ScalarProperty Name="Political_Science_Government" ColumnName="Political Science&amp;Government" />
+          <ScalarProperty Name="Postsecondary_Education" ColumnName="Postsecondary Education" />
+          <ScalarProperty Name="Precision_Production_Trades_General" ColumnName="Precision Production Trades,General" />
+          <ScalarProperty Name="Protective_Services_General" ColumnName="Protective Services,General" />
+          <ScalarProperty Name="Psychiatric_Mental_Health_Technician" ColumnName="Psychiatric/Mental Health Technician" />
+          <ScalarProperty Name="Psychology_Clinical_Counseling" ColumnName="Psychology,Clinical&amp;Counseling" />
+          <ScalarProperty Name="Psychology_General" ColumnName="Psychology,General" />
+          <ScalarProperty Name="Public_Administration" ColumnName="Public Administration" />
+          <ScalarProperty Name="Public_Administration_Services_General" ColumnName="Public Administration&amp;Services,General" />
+          <ScalarProperty Name="Public_Affairs_Public_Policy_Analysis" ColumnName="Public Affairs&amp;Public Policy Analysis" />
+          <ScalarProperty Name="Public_Health" ColumnName="Public Health" />
+          <ScalarProperty Name="Public_Relations_Organizational_Communication" ColumnName="Public Relations&amp;Organizational Communication" />
+          <ScalarProperty Name="Public_Speaking" ColumnName="Public Speaking" />
+          <ScalarProperty Name="Purchasing_Procurement_Contracts_Management" ColumnName="Purchasing/Procurement/Contracts Management" />
+          <ScalarProperty Name="Quality_Control_Safety_Technologies" ColumnName="Quality Control&amp;Safety Technologies" />
+          <ScalarProperty Name="Radio_Television_Broadcasting" ColumnName="Radio&amp;Television Broadcasting" />
+          <ScalarProperty Name="Radio_Television_Broadcasting_Technology" ColumnName="Radio&amp;Television Broadcasting Technology" />
+          <ScalarProperty Name="Real_Estate" ColumnName="Real Estate" />
+          <ScalarProperty Name="Rehabilitation_Therapy" ColumnName="Rehabilitation Therapy" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Religious_Education" ColumnName="Religious Education" />
+          <ScalarProperty Name="Respiratory_Therapy_Technology" ColumnName="Respiratory Therapy Technology" />
+          <ScalarProperty Name="Restaurant_Food_Services_Management" ColumnName="Restaurant/Food Services Management" />
+          <ScalarProperty Name="Sales_Merchandising_Marketing_General" ColumnName="Sales,Merchandising&amp;Marketing,General" />
+          <ScalarProperty Name="Science_Education" ColumnName="Science Education" />
+          <ScalarProperty Name="Secondary_Education" ColumnName="Secondary Education" />
+          <ScalarProperty Name="Secretarial_Studies_Office_Administration" ColumnName="Secretarial Studies&amp;Office Administration" />
+          <ScalarProperty Name="Small_Business_Management_Operations" ColumnName="Small Business Management/Operations" />
+          <ScalarProperty Name="Social_Sciences_General" ColumnName="Social Sciences,General" />
+          <ScalarProperty Name="Social_Studies_Sciences_Education" ColumnName="Social Studies/Sciences Education" />
+          <ScalarProperty Name="Social_Work" ColumnName="Social Work" />
+          <ScalarProperty Name="Sociology" ColumnName="Sociology" />
+          <ScalarProperty Name="Spanish_Language_Literature" ColumnName="Spanish Language&amp;Literature" />
+          <ScalarProperty Name="Special_Education" ColumnName="Special Education" />
+          <ScalarProperty Name="Sport_Fitness_Administration_Management" ColumnName="Sport&amp;Fitness Administration/Management" />
+          <ScalarProperty Name="Statistics" ColumnName="Statistics" />
+          <ScalarProperty Name="Surgical_Technology" ColumnName="Surgical Technology" />
+          <ScalarProperty Name="Surveying_Technology" ColumnName="Surveying Technology" />
+          <ScalarProperty Name="Teacher_Assisting_Aide_Education" ColumnName="Teacher Assisting/Aide Education" />
+          <ScalarProperty Name="Teacher_Education_General" ColumnName="Teacher Education,General" />
+          <ScalarProperty Name="Teacher_Education_Subject_Specific" ColumnName="Teacher Education,Subject-Specific" />
+          <ScalarProperty Name="Textile_Apparel" ColumnName="Textile&amp;Apparel" />
+          <ScalarProperty Name="Theatre_Arts_Drama" ColumnName="Theatre Arts/Drama" />
+          <ScalarProperty Name="Theology_General" ColumnName="Theology,General" />
+          <ScalarProperty Name="Therapy_Rehabilitation_General" ColumnName="Therapy&amp;Rehabilitation,General" />
+          <ScalarProperty Name="Tourism_Travel_Marketing" ColumnName="Tourism&amp;Travel Marketing" />
+          <ScalarProperty Name="Transportation_Materials_Moving_e_g_air_ground_marine" ColumnName="Transportation/Materials Moving e.g air,ground,marine" />
+          <ScalarProperty Name="Travel_Tourism_Management" ColumnName="Travel/Tourism Management" />
+          <ScalarProperty Name="Urban_Studies_Urban_Affairs" ColumnName="Urban Studies/Urban Affairs" />
+          <ScalarProperty Name="Veterinarian_Assisting_Technology" ColumnName="Veterinarian Assisting/Technology" />
+          <ScalarProperty Name="Veterinary_Medicine_Pre_Veterinarian" ColumnName="Veterinary Medicine Pre-Veterinarian" />
+          <ScalarProperty Name="Vocational_Rehabilitation_Counseling" ColumnName="Vocational Rehabilitation Counseling" />
+          <ScalarProperty Name="Webpage_Design" ColumnName="Webpage Design" />
+          <ScalarProperty Name="Welding_Technology" ColumnName="Welding Technology" />
+          <ScalarProperty Name="Wildlife_Wildlands_Management" ColumnName="Wildlife&amp;Wildlands Management" />
+          <ScalarProperty Name="Women_s_Studies" ColumnName="Women's Studies" />
+          <ScalarProperty Name="Zoology" ColumnName="Zoology" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

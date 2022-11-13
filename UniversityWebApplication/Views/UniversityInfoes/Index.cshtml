@@ -1,0 +1,666 @@
+﻿@model IEnumerable<UniversityWebApplication.Models.UniversityInfo>
+
+@{
+    Layout = null;
+}
+<h1 align="center">List of University Entries</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>University Database</title>
+    <style>
+        body {
+            font-family: "Times New Roman";
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: darkblue;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        @ViewBag.UniversityList
+    </p>
+    <style>
+        table,
+        th,
+        td {
+            padding: 10px;
+            border: 5px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <table class="table">
+        <tr>
+            <th style="text-align:center">    ID    </th>
+            <th style="text-align:center">    Name    </th>
+            <th style="text-align:center">    Address    </th>
+            <th style="text-align:center">    Average Domestic Undergraduate Cost of Tuition per semester    </th>
+            <th style="text-align:center">    Average International Undergraduate Cost of Tuition per semester    </th>
+            <th style="text-align:center">    Average Domestic Postgraduate(Master)Cost of Tuition per semester    </th>
+            <th style="text-align:center">    Average International Postgraduate(Master)Cost of Tuition per semester    </th>
+            <th style="text-align:center">    Average Cost of Living    </th>
+            <th style="text-align:center">    Type    </th>
+            <th style="text-align:center">    Campus Setting    </th>
+            <th style="text-align:center">    QS General Ranking    </th>
+            <th style="text-align:center">    Qualification Requirements    </th>
+            <th style="text-align:center">    Accounting    </th>
+            <th style="text-align:center">    Accounting Technician    </th>
+            <th style="text-align:center">    Actuarial Science    </th>
+            <th style="text-align:center">    Adult Development & Aging/Gerontology    </th>
+            <th style="text-align:center">    Advertising    </th>
+            <th style="text-align:center">    Aeronautical & Astronautical Engineering Technologies    </th>
+            <th style="text-align:center">    Aeronautical & Astronautical Engineering    </th>
+            <th style="text-align:center">    African American Studies    </th>
+            <th style="text-align:center">    Agribusiness Operations    </th>
+            <th style="text-align:center">    Agricultural Business&Management    </th>
+            <th style="text-align:center">    Agricultural Economics    </th>
+            <th style="text-align:center">    Agricultural Education    </th>
+            <th style="text-align:center">    Agricultural Mechanization    </th>
+            <th style="text-align:center">    Agricultural Production    </th>
+            <th style="text-align:center">    Agricultural/Bioengineering    </th>
+            <th style="text-align:center">    Agriculture,General    </th>
+            <th style="text-align:center">    Agronomy & Crop Science    </th>
+            <th style="text-align:center">    Aircraft Mechanics/Technology    </th>
+            <th style="text-align:center">    Aircraft Piloting & Navigation    </th>
+            <th style="text-align:center">    Alcohol/Drug Abuse Counseling    </th>
+            <th style="text-align:center">    American Indian/Native American Studies    </th>
+            <th style="text-align:center">    American/English Literature    </th>
+            <th style="text-align:center">    Animal Sciences    </th>
+            <th style="text-align:center">    Anthropology    </th>
+            <th style="text-align:center">    Applied Mathematics    </th>
+            <th style="text-align:center">    Architectural Drafting/CAD Technology    </th>
+            <th style="text-align:center">    Architectural Engineering    </th>
+            <th style="text-align:center">    Architectural Engineering Technology    </th>
+            <th style="text-align:center">    Architectural Environmental Design    </th>
+            <th style="text-align:center">    Architecture,General    </th>
+            <th style="text-align:center">    Area Studies,General(e.g. African,Middle Eastern)    </th>
+            <th style="text-align:center">    Art Education    </th>
+            <th style="text-align:center">    Art History,Criticism & Conservation    </th>
+            <th style="text-align:center">    Art,General    </th>
+            <th style="text-align:center">    Asian Area Studies    </th>
+            <th style="text-align:center">    Asian Languages & Literatures    </th>
+            <th style="text-align:center">    Astronomy    </th>
+            <th style="text-align:center">    Athletic Training    </th>
+            <th style="text-align:center">    Atmospheric Sciences & Meteorology    </th>
+            <th style="text-align:center">    Autobody Repair/Technology    </th>
+            <th style="text-align:center">    Automotive Engineering Technology    </th>
+            <th style="text-align:center">    Automotive Mechanics/Technology    </th>
+            <th style="text-align:center">    Aviation & Airway Science,General    </th>
+            <th style="text-align:center">    Aviation Management & Operations    </th>
+            <th style="text-align:center">    Avionics Technology    </th>
+            <th style="text-align:center">    Banking & Financial Support Services    </th>
+            <th style="text-align:center">    Bible/Biblical Studies    </th>
+            <th style="text-align:center">    Biochemistry & Biophysics    </th>
+            <th style="text-align:center">    Biology,General    </th>
+            <th style="text-align:center">    Biomedical Engineering    </th>
+            <th style="text-align:center">    Business Administration & Management,General    </th>
+            <th style="text-align:center">    Business Education    </th>
+            <th style="text-align:center">    Business/Management Quantitative Methods,General    </th>
+            <th style="text-align:center">    Business/Managerial Economics    </th>
+            <th style="text-align:center">    Career & Technical Education    </th>
+            <th style="text-align:center">    Cell/Cellular Biology    </th>
+            <th style="text-align:center">    Chemical Engineering    </th>
+            <th style="text-align:center">    Chemistry    </th>
+            <th style="text-align:center">    Child Care Services Management    </th>
+            <th style="text-align:center">    Child Development    </th>
+            <th style="text-align:center">    Chiropractic(Pre-Chiropractic)    </th>
+            <th style="text-align:center">    Cinema/Film    </th>
+            <th style="text-align:center">    Cinematography/Film/Video Production    </th>
+            <th style="text-align:center">    City/Urban/Regional Planning    </th>
+            <th style="text-align:center">    Civil Engineering    </th>
+            <th style="text-align:center">    Civil Engineering Technology    </th>
+            <th style="text-align:center">    Classical/Ancient Languages & Literatures    </th>
+            <th style="text-align:center">    Communication Disorder Services(e.g. Speech Pathology)    </th>
+            <th style="text-align:center">    Communications Technology,General    </th>
+            <th style="text-align:center">    Communications,General    </th>
+            <th style="text-align:center">    Community Organization & Advocacy    </th>
+            <th style="text-align:center">    Comparative Literature    </th>
+            <th style="text-align:center">    Computer & Information Sciences,General    </th>
+            <th style="text-align:center">    Computer Engineering    </th>
+            <th style="text-align:center">    Computer Engineering Technology    </th>
+            <th style="text-align:center">    Computer Networking/Telecommunications    </th>
+            <th style="text-align:center">    Computer Science & Programming    </th>
+            <th style="text-align:center">    Computer Software & Media Applications    </th>
+            <th style="text-align:center">    Computer System Administration    </th>
+            <th style="text-align:center">    Construction Engineering/Management    </th>
+            <th style="text-align:center">    Construction Trades(e.g. carpentry,plumbing,electrical)    </th>
+            <th style="text-align:center">    Construction/Building Technology    </th>
+            <th style="text-align:center">    Consumer & Family Economics    </th>
+            <th style="text-align:center">    Corrections    </th>
+            <th style="text-align:center">    Cosmetology/Hairstyling    </th>
+            <th style="text-align:center">    Counseling & Student Services    </th>
+            <th style="text-align:center">    Court Reporting    </th>
+            <th style="text-align:center">    Creative Writing    </th>
+            <th style="text-align:center">    Criminal Justice    </th>
+            <th style="text-align:center">    Criminology    </th>
+            <th style="text-align:center">    Culinary Arts/Chef Training    </th>
+            <th style="text-align:center">    Curriculum & Instruction    </th>
+            <th style="text-align:center">    Dance    </th>
+            <th style="text-align:center">    Data Management Technology    </th>
+            <th style="text-align:center">    Dental Assisting    </th>
+            <th style="text-align:center">    Dental Hygiene    </th>
+            <th style="text-align:center">    Dentistry(Pre-Dentistry)    </th>
+            <th style="text-align:center">    Design & Visual Communications,General    </th>
+            <th style="text-align:center">    Diesel Mechanics/Technology    </th>
+            <th style="text-align:center">    Digital Communications/Media    </th>
+            <th style="text-align:center">    Divinity/Ministry    </th>
+            <th style="text-align:center">    Drafting/CAD Technology,General    </th>
+            <th style="text-align:center">    Early Childhood Education    </th>
+            <th style="text-align:center">    Ecology    </th>
+            <th style="text-align:center">    Economics    </th>
+            <th style="text-align:center">    Educational Administration    </th>
+            <th style="text-align:center">    Electrical,Electronics & Communications Engineering    </th>
+            <th style="text-align:center">    Electrical,Electronics Engineering Technologies    </th>
+            <th style="text-align:center">    Electrical & Electronics Equip Installation & Repair    </th>
+            <th style="text-align:center">    Electromechanical & Biomedical Engineering Technologies    </th>
+            <th style="text-align:center">    Elementary Education    </th>
+            <th style="text-align:center">    Emergency Medical Technology    </th>
+            <th style="text-align:center">    Engineering(Pre-Engineering),General    </th>
+            <th style="text-align:center">    Engineering Technology,General    </th>
+            <th style="text-align:center">    English Language & Literature,General    </th>
+            <th style="text-align:center">    English/Language Arts Education    </th>
+            <th style="text-align:center">    English-as-a-Second-Language Education    </th>
+            <th style="text-align:center">    Environmental Control Technologies    </th>
+            <th style="text-align:center">    Environmental Health Engineering    </th>
+            <th style="text-align:center">    Environmental Science    </th>
+            <th style="text-align:center">    Ethnic & Minority Studies,General    </th>
+            <th style="text-align:center">    European Area Studies    </th>
+            <th style="text-align:center">    Exercise Science/Physiology/Kinesiology    </th>
+            <th style="text-align:center">    Family & Consumer Sciences,General    </th>
+            <th style="text-align:center">    Fashion Merchandising    </th>
+            <th style="text-align:center">    Fashion/Apparel Design    </th>
+            <th style="text-align:center">    Finance,General    </th>
+            <th style="text-align:center">    Financial Planning & Services    </th>
+            <th style="text-align:center">    Fine/Studio Arts    </th>
+            <th style="text-align:center">    Fire Protection & Safety Technology    </th>
+            <th style="text-align:center">    Food & Nutrition    </th>
+            <th style="text-align:center">    Food Sciences & Technology    </th>
+            <th style="text-align:center">    Foreign Languages/Education    </th>
+            <th style="text-align:center">    Foreign Languages/Literatures,General    </th>
+            <th style="text-align:center">    Forestry    </th>
+            <th style="text-align:center">    French Language & Literature    </th>
+            <th style="text-align:center">    Funeral Services & Mortuary Science    </th>
+            <th style="text-align:center">    Genetics    </th>
+            <th style="text-align:center">    Geography    </th>
+            <th style="text-align:center">    Geological & Earth Sciences    </th>
+            <th style="text-align:center">    German Language & Literature    </th>
+            <th style="text-align:center">    Graphic & Printing Equipment Operation    </th>
+            <th style="text-align:center">    Graphic Design    </th>
+            <th style="text-align:center">    Health & Physical Education/Fitness    </th>
+            <th style="text-align:center">    Health Education    </th>
+            <th style="text-align:center">    Health Services Administration,General    </th>
+            <th style="text-align:center">    Health/Medical Technology,General    </th>
+            <th style="text-align:center">    Health-Related Professions & Services,General    </th>
+            <th style="text-align:center">    Heating/Air-Cond/Refrig Install/Repair    </th>
+            <th style="text-align:center">    History    </th>
+            <th style="text-align:center">    Horticulture Operations & Management    </th>
+            <th style="text-align:center">    Horticulture Science    </th>
+            <th style="text-align:center">    Hospital/Facilities Administration    </th>
+            <th style="text-align:center">    Hotel/Motel Management    </th>
+            <th style="text-align:center">    Human Resources Development/Training    </th>
+            <th style="text-align:center">    Human Resources Management    </th>
+            <th style="text-align:center">    Industrial Design    </th>
+            <th style="text-align:center">    Industrial Engineering    </th>
+            <th style="text-align:center">    Industrial Production Technologies    </th>
+            <th style="text-align:center">    Information Science    </th>
+            <th style="text-align:center">    Insurance & Risk Management    </th>
+            <th style="text-align:center">    Interior Architecture    </th>
+            <th style="text-align:center">    Interior Design    </th>
+            <th style="text-align:center">    International Business Management    </th>
+            <th style="text-align:center">    International Relations & Affairs    </th>
+            <th style="text-align:center">    Investments & Securities    </th>
+            <th style="text-align:center">    Journalism Broadcast    </th>
+            <th style="text-align:center">    Journalism Print    </th>
+            <th style="text-align:center">    Junior High/Middle School Education    </th>
+            <th style="text-align:center">    Labor/Industrial Relations    </th>
+            <th style="text-align:center">    Landscape Architecture    </th>
+            <th style="text-align:center">    Latin American Area Studies    </th>
+            <th style="text-align:center">    Latino/Chicano Studies    </th>
+            <th style="text-align:center">    Law(Pre-Law)    </th>
+            <th style="text-align:center">    Law Enforcement    </th>
+            <th style="text-align:center">    Legal Administrative Assisting/Secretarial    </th>
+            <th style="text-align:center">    Legal Studies,General    </th>
+            <th style="text-align:center">    Liberal Arts & General Studies    </th>
+            <th style="text-align:center">    Library Science    </th>
+            <th style="text-align:center">    Linguistics    </th>
+            <th style="text-align:center">    Logistics & Materials Management    </th>
+            <th style="text-align:center">    Machine Tool Technology    </th>
+            <th style="text-align:center">    Management Information Systems    </th>
+            <th style="text-align:center">    Marine/Aquatic Biology    </th>
+            <th style="text-align:center">    Marketing Management & Research    </th>
+            <th style="text-align:center">    Mass Communications    </th>
+            <th style="text-align:center">    Massage Therapy    </th>
+            <th style="text-align:center">    Mathematics Education    </th>
+            <th style="text-align:center">    Mathematics,General    </th>
+            <th style="text-align:center">    Mechanical Drafting/CAD Technology    </th>
+            <th style="text-align:center">    Mechanical Engineering    </th>
+            <th style="text-align:center">    Mechanical Engineering Technology    </th>
+            <th style="text-align:center">    Mechanics & Repairers,General    </th>
+            <th style="text-align:center">    Medical Assisting    </th>
+            <th style="text-align:center">    Medical Laboratory Technology    </th>
+            <th style="text-align:center">    Medical Office/Secretarial    </th>
+            <th style="text-align:center">    Medical Radiologic Technology    </th>
+            <th style="text-align:center">    Medical Records    </th>
+            <th style="text-align:center">    Medical/Clinical Assisting,General    </th>
+            <th style="text-align:center">    Medicine(Pre-Medicine)    </th>
+            <th style="text-align:center">    Mental Health Counseling    </th>
+            <th style="text-align:center">    Microbiology & Immunology    </th>
+            <th style="text-align:center">    Middle Eastern Languages & Literatures    </th>
+            <th style="text-align:center">    Military Technologies    </th>
+            <th style="text-align:center">    Multi/Interdisciplinary Studies    </th>
+            <th style="text-align:center">    Multimedia/Animation/Special Effects    </th>
+            <th style="text-align:center">    Music Education    </th>
+            <th style="text-align:center">    Music,General    </th>
+            <th style="text-align:center">    Music,Performance    </th>
+            <th style="text-align:center">    Music,Theory & Composition    </th>
+            <th style="text-align:center">    Natural Resources Conservation,General    </th>
+            <th style="text-align:center">    Natural Resources Management    </th>
+            <th style="text-align:center">    North American Area Studies    </th>
+            <th style="text-align:center">    Nuclear Engineering    </th>
+            <th style="text-align:center">    Nuclear Medicine Technology    </th>
+            <th style="text-align:center">    Nursing,Practical/Vocational(LPN)    </th>
+            <th style="text-align:center">    Nursing,Registered(BS/RN)    </th>
+            <th style="text-align:center">    Occupational Therapy    </th>
+            <th style="text-align:center">    Occupational Therapy Assisting    </th>
+            <th style="text-align:center">    Office Supervision & Management    </th>
+            <th style="text-align:center">    Operations Management & Supervision    </th>
+            <th style="text-align:center">    Optometry(Pre-Optometry)    </th>
+            <th style="text-align:center">    Organizational Behavior    </th>
+            <th style="text-align:center">    Osteopathic Medicine    </th>
+            <th style="text-align:center">    Paralegal/Legal Assistant    </th>
+            <th style="text-align:center">    Parks Recreation & Leisure,General    </th>
+            <th style="text-align:center">    Parks/Rec/Leisure Facilities Management    </th>
+            <th style="text-align:center">    Personal Services,General    </th>
+            <th style="text-align:center">    Pharmacy(Pre-Pharmacy)    </th>
+            <th style="text-align:center">    Philosophy    </th>
+            <th style="text-align:center">    Photography    </th>
+            <th style="text-align:center">    Physical Education & Coaching    </th>
+            <th style="text-align:center">    Physical Sciences,General    </th>
+            <th style="text-align:center">    Physical Therapy(Pre-Physical Therapy)    </th>
+            <th style="text-align:center">    Physical Therapy Assisting    </th>
+            <th style="text-align:center">    Physician Assisting    </th>
+            <th style="text-align:center">    Physics    </th>
+            <th style="text-align:center">    Political Science & Government    </th>
+            <th style="text-align:center">    Postsecondary Education    </th>
+            <th style="text-align:center">    Precision Production Trades,General    </th>
+            <th style="text-align:center">    Protective Services,General    </th>
+            <th style="text-align:center">    Psychiatric/Mental Health Technician    </th>
+            <th style="text-align:center">    Psychology,Clinical & Counseling    </th>
+            <th style="text-align:center">    Psychology,General    </th>
+            <th style="text-align:center">    Public Administration    </th>
+            <th style="text-align:center">    Public Administration & Services,General    </th>
+            <th style="text-align:center">    Public Affairs & Public Policy Analysis    </th>
+            <th style="text-align:center">    Public Health    </th>
+            <th style="text-align:center">    Public Relations & Organizational Communication    </th>
+            <th style="text-align:center">    Public Speaking    </th>
+            <th style="text-align:center">    Purchasing/Procurement/Contracts Management    </th>
+            <th style="text-align:center">    Quality Control & Safety Technologies    </th>
+            <th style="text-align:center">    Radio & Television Broadcasting    </th>
+            <th style="text-align:center">    Radio & Television Broadcasting Technology    </th>
+            <th style="text-align:center">    Real Estate    </th>
+            <th style="text-align:center">    Rehabilitation Therapy    </th>
+            <th style="text-align:center">    Religion    </th>
+            <th style="text-align:center">    Religious Education    </th>
+            <th style="text-align:center">    Respiratory Therapy Technology    </th>
+            <th style="text-align:center">    Restaurant/Food Services Management    </th>
+            <th style="text-align:center">    Sales,Merchandising & Marketing,General    </th>
+            <th style="text-align:center">    Science Education    </th>
+            <th style="text-align:center">    Secondary Education    </th>
+            <th style="text-align:center">    Secretarial Studies & Office Administration    </th>
+            <th style="text-align:center">    Small Business Management/Operations    </th>
+            <th style="text-align:center">    Social Sciences,General    </th>
+            <th style="text-align:center">    Social Studies/Sciences Education    </th>
+            <th style="text-align:center">    Social Work    </th>
+            <th style="text-align:center">    Sociology    </th>
+            <th style="text-align:center">    Spanish Language & Literature    </th>
+            <th style="text-align:center">    Special Education    </th>
+            <th style="text-align:center">    Sport & Fitness Administration/Management    </th>
+            <th style="text-align:center">    Statistics    </th>
+            <th style="text-align:center">    Surgical Technology    </th>
+            <th style="text-align:center">    Surveying Technology    </th>
+            <th style="text-align:center">    Teacher Assisting/Aide Education    </th>
+            <th style="text-align:center">    Teacher Education,General    </th>
+            <th style="text-align:center">    Teacher Education,Subject-Specific    </th>
+            <th style="text-align:center">    Textile & Apparel    </th>
+            <th style="text-align:center">    Theatre Arts/Drama    </th>
+            <th style="text-align:center">    Theology,General    </th>
+            <th style="text-align:center">    Therapy & Rehabilitation,General    </th>
+            <th style="text-align:center">    Tourism & Travel Marketing    </th>
+            <th style="text-align:center">    Transportation/Materials Moving(e.g. air,ground,marine)    </th>
+            <th style="text-align:center">    Travel/Tourism Management    </th>
+            <th style="text-align:center">    Urban Studies/Urban Affairs    </th>
+            <th style="text-align:center">    Veterinarian Assisting/Technology    </th>
+            <th style="text-align:center">    Veterinary Medicine(Pre-Veterinarian)    </th>
+            <th style="text-align:center">    Vocational Rehabilitation Counseling    </th>
+            <th style="text-align:center">    Webpage Design    </th>
+            <th style="text-align:center">    Welding Technology    </th>
+            <th style="text-align:center">    Wildlife & Wildlands Management    </th>
+            <th style="text-align:center">    Women's Studies    </th>
+            <th style="text-align:center">    Zoology    </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.ID)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Name)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Address)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Average_Domestic_Undergraduate_Cost_of_Tuition_per_semester)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Average_International_Undergraduate_Cost_of_Tuition_per_semester)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Average_Domestic_Postgraduate_Master_Cost_of_Tuition_per_semester)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Average_International_Postgraduate_Master_Cost_of_Tuition_per_semester)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Average_Cost_of_Living)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Type)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Campus_Setting)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.QS_General_Ranking)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Qualification_Requirements)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Accounting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Accounting_Technician.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Actuarial_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Adult_Development_Aging_Gerontology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Advertising.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aeronautical_Astronautical_Engineering_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aeronautical_Astronautical_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.African_American_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agribusiness_Operations.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Business_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Economics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Mechanization.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Production.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agricultural_Bioengineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agriculture_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Agronomy_Crop_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aircraft_Mechanics_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aircraft_Piloting_Navigation.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Alcohol_Drug_Abuse_Counseling.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.American_Indian_Native_American_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.American_English_Literature.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Animal_Sciences.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Anthropology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Applied_Mathematics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Architectural_Drafting_CAD_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Architectural_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Architectural_Engineering_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Architectural_Environmental_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Architecture_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Area_Studies_General_e_g_African_Middle_Eastern.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Art_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Art_History_Criticism_Conservation.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Art_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Asian_Area_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Asian_Languages_Literatures.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Astronomy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Athletic_Training.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Atmospheric_Sciences_Meteorology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Autobody_Repair_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Automotive_Engineering_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Automotive_Mechanics_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aviation_Airway_Science_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Aviation_Management_Operations.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Avionics_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Banking_Financial_Support_Services.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Bible_Biblical_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Biochemistry_Biophysics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Biology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Biomedical_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Business_Administration_Management_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Business_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Business_Management_Quantitative_Methods_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Business_Managerial_Economics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Career_Technical_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Cell_Cellular_Biology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Chemical_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Chemistry.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Child_Care_Services_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Child_Development.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Chiropractic_Pre_Chiropractic.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Cinema_Film.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Cinematography_Film_Video_Production.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.City_Urban_Regional_Planning.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Civil_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Civil_Engineering_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Classical_Ancient_Languages_Literatures.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Communication_Disorder_Services_e_g_Speech_Pathology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Communications_Technology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Communications_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Community_Organization_Advocacy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Comparative_Literature.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Information_Sciences_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Engineering_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Networking_Telecommunications.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Science_Programming.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_Software_Media_Applications.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Computer_System_Administration.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Construction_Engineering_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Construction_Trades_e_g_carpentry_plumbing_electrical.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Construction_Building_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Consumer_Family_Economics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Corrections.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Cosmetology_Hairstyling.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Counseling_Student_Services.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Court_Reporting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Creative_Writing.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Criminal_Justice.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Criminology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Culinary_Arts_Chef_Training.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Curriculum_Instruction.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Dance.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Data_Management_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Dental_Assisting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Dental_Hygiene.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Dentistry_Pre_Dentistry.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Design_Visual_Communications_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Diesel_Mechanics_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Digital_Communications_Media.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Divinity_Ministry.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Drafting_CAD_Technology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Early_Childhood_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Ecology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Economics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Educational_Administration.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Electrical_Electronics_Communications_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Electrical_Electronics_Engineering_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Electrical_Electronics_Equip_Installation_Repair.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Electromechanical_Biomedical_Engineering_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Elementary_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Emergency_Medical_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Engineering_Pre_Engineering_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Engineering_Technology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.English_Language_Literature_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.English_Language_Arts_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.English_as_a_Second_Language_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Environmental_Control_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Environmental_Health_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Environmental_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Ethnic_Minority_Studies_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.European_Area_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Exercise_Science_Physiology_Kinesiology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Family_Consumer_Sciences_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Fashion_Merchandising.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Fashion_Apparel_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Finance_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Financial_Planning_Services.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Fine_Studio_Arts.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Fire_Protection_Safety_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Food_Nutrition.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Food_Sciences_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Foreign_Languages_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Foreign_Languages_Literatures_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Forestry.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.French_Language_Literature.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Funeral_Services_Mortuary_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Genetics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Geography.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Geological_Earth_Sciences.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.German_Language_Literature.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Graphic_Printing_Equipment_Operation.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Graphic_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Health_Physical_Education_Fitness.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Health_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Health_Services_Administration_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Health_Medical_Technology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Health_Related_Professions_Services_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Heating_Air_Cond_Refrig_Install_Repair.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.History.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Horticulture_Operations_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Horticulture_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Hospital_Facilities_Administration.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Hotel_Motel_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Human_Resources_Development_Training.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Human_Resources_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Industrial_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Industrial_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Industrial_Production_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Information_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Insurance_Risk_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Interior_Architecture.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Interior_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.International_Business_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.International_Relations_Affairs.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Investments_Securities.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Journalism_Broadcast.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Journalism_Print.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Junior_High_Middle_School_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Labor_Industrial_Relations.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Landscape_Architecture.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Latin_American_Area_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Latino_Chicano_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Law_Pre_Law.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Law_Enforcement.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Legal_Administrative_Assisting_Secretarial.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Legal_Studies_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Liberal_Arts_General_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Library_Science.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Linguistics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Logistics_Materials_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Machine_Tool_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Management_Information_Systems.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Marine_Aquatic_Biology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Marketing_Management_Research.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mass_Communications.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Massage_Therapy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mathematics_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mathematics_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mechanical_Drafting_CAD_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mechanical_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mechanical_Engineering_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mechanics_Repairers_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Assisting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Laboratory_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Office_Secretarial.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Radiologic_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Records.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medical_Clinical_Assisting_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Medicine_Pre_Medicine.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Mental_Health_Counseling.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Microbiology_Immunology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Middle_Eastern_Languages_Literatures.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Military_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Multi_Interdisciplinary_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Multimedia_Animation_Special_Effects.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Music_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Music_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Music_Performance.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Music_Theory_Composition.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Natural_Resources_Conservation_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Natural_Resources_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.North_American_Area_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Nuclear_Engineering.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Nuclear_Medicine_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Nursing_Practical_Vocational_LPN.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Nursing_Registered_BS_RN.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Occupational_Therapy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Occupational_Therapy_Assisting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Office_Supervision_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Operations_Management_Supervision.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Optometry_Pre_Optometry.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Organizational_Behavior.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Osteopathic_Medicine.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Paralegal_Legal_Assistant.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Parks_Recreation_Leisure_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Parks_Rec_Leisure_Facilities_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Personal_Services_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Pharmacy_Pre_Pharmacy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Philosophy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Photography.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physical_Education_Coaching.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physical_Sciences_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physical_Therapy_Pre_Physical_Therapy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physical_Therapy_Assisting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physician_Assisting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Physics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Political_Science_Government.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Postsecondary_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Precision_Production_Trades_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Protective_Services_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Psychiatric_Mental_Health_Technician.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Psychology_Clinical_Counseling.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Psychology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Administration.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Administration_Services_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Affairs_Public_Policy_Analysis.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Health.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Relations_Organizational_Communication.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Public_Speaking.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Purchasing_Procurement_Contracts_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Quality_Control_Safety_Technologies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Radio_Television_Broadcasting.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Radio_Television_Broadcasting_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Real_Estate.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Rehabilitation_Therapy.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Religion.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Religious_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Respiratory_Therapy_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Restaurant_Food_Services_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Sales_Merchandising_Marketing_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Science_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Secondary_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Secretarial_Studies_Office_Administration.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Small_Business_Management_Operations.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Social_Sciences_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Social_Studies_Sciences_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Social_Work.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Sociology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Spanish_Language_Literature.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Special_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Sport_Fitness_Administration_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Statistics.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Surgical_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Surveying_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Teacher_Assisting_Aide_Education.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Teacher_Education_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Teacher_Education_Subject_Specific.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Textile_Apparel.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Theatre_Arts_Drama.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Theology_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Therapy_Rehabilitation_General.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Tourism_Travel_Marketing.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Transportation_Materials_Moving_e_g_air_ground_marine.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Travel_Tourism_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Urban_Studies_Urban_Affairs.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Veterinarian_Assisting_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Veterinary_Medicine_Pre_Veterinarian.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Vocational_Rehabilitation_Counseling.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Webpage_Design.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Welding_Technology.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Wildlife_Wildlands_Management.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Women_s_Studies.Value)</td>
+                <td style="text-align:center">@Html.DisplayFor(modelItem => item.Zoology.Value)</td>
+            </tr>
+        }
+    </table>
+
+    <div>
+        <button onclick="location.href='@Url.Action("Create")'">Main Menu</button>
+    </div>
+</body>
+</html>
