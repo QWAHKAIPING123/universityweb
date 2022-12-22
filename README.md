@@ -1,1 +1,1 @@
-# universityweb
+# University Database
